@@ -1,0 +1,26 @@
+%my-btn{
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $main-blue-color;
+  border: 1px solid $main-blue-color;
+  color: $white;
+  padding: 10px 40px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 8px;
+  @include media-breakpoint-down(md) {
+    border-radius: 6px;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 8px 30px;
+  }
+  @include media-breakpoint-down(xs) {
+    border-radius: 4px;
+  }
+  &:hover{
+    background-color: transparent;
+    color: $main-blue-color;
+  }
+}
+.main-btn{
+  @extend %my-btn;
+}
