@@ -1,20 +1,22 @@
 .header-logo {
   img {
-    height: 50px;
+    max-height: 50px;
     width: auto;
+    max-width: 100%;
+    height: auto;
     @include media-breakpoint-up(xxl) {
-      height: 55px;
+      max-height: 55px;
     }
     @include media-breakpoint-down(md) {
-      height: 45px;
+      max-height: 45px;
     }
     @include media-breakpoint-down(sm) {
-      height: 38px;
+      max-height: 38px;
     }
   }
 }
 .top-bar {
-  padding: 20px 0;
+  padding: 30px 0 20px 0;
   .dropdown-toggle:after {
     display: none;
   }
@@ -33,10 +35,10 @@
         border-radius: 50px;
         &:hover, &:focus{
           background-color: $page-bg-color;
-
         }
         svg{
           height: 20px;
+          max-width: 18px;
           path{
             transition: all ease-in-out 0.3s;
           }
@@ -161,6 +163,11 @@
             }
           }
         }
+      }
+    }
+    &.search-top-bar-drop{
+      .dropdown-menu{
+        min-width: 450px;
       }
     }
   }

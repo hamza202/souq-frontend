@@ -43,32 +43,35 @@ let main = (function () {
 
 
 
-    let swiperMainSlider = function () {
-        let swiperAnimation = new SwiperAnimation();
-        new Swiper("#main-slider", {
-            autoplay: {
-                delay: 10000,
-                disableOnInteraction: false,
-            },
-            spaceBetween: 30,
-            effect: "fade",
-            speed: 500,
-            loop: true,
+    let swiperStatisticsSlider = function () {
+        var swiper = new Swiper("#statistics_slider", {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            spaceBetween: 10,
             pagination: {
                 el: ".swiper-pagination",
-                // type: "fraction",
                 clickable: true,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            on: {
-                init: function () {
-                    swiperAnimation.init(this).animate();
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
                 },
-                slideChange: function () {
-                    swiperAnimation.init(this).animate();
+                400: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                },
+                768: {
+                    slidesPerView: 1,
+                    slidesPerColumn: 2,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
                 },
             },
         });
@@ -122,8 +125,8 @@ let main = (function () {
             handleMenuResponsive();
             fixedHeaderOnScroll();
             handleDropDown();
-            if ($("#main-slider").length) {
-                swiperMainSlider();
+            if ($("#statistics_slider").length) {
+                swiperStatisticsSlider();
             }
             if ($('.number-cunt').length) {
                 increaseDecreaseInput()
