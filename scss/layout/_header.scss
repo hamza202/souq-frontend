@@ -15,42 +15,55 @@
     }
   }
 }
+
 .top-bar {
   padding: 30px 0 20px 0;
+  @include media-breakpoint-down(xxl) {
+    padding: 20px 0;
+  }
+
   .dropdown-toggle:after {
     display: none;
   }
 }
+
 .top-bar-drop-list {
-  .dropdown{
-    margin-#{$dir}:10px ;
-    &.drop-svg-icon{
-      .dropdown-toggle{
+  .dropdown {
+    margin-#{$dir}: 10px;
+
+    &.drop-svg-icon {
+      .dropdown-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 35px;
-        height:35px;
+        height: 35px;
         background-color: $bg-blue-color;
         border-radius: 50px;
-        &:hover, &:focus{
+
+        &:hover, &:focus {
           background-color: $page-bg-color;
         }
-        svg{
+
+        svg {
           height: 20px;
           max-width: 18px;
-          path{
+
+          path {
             transition: all ease-in-out 0.3s;
           }
         }
       }
-      .dropdown-menu.dropdown-menu-end{
+
+      .dropdown-menu.dropdown-menu-end {
         #{$opDir}: -8px !important;
       }
     }
-    .dropdown-toggle{
+
+    .dropdown-toggle {
       display: block;
       position: relative;
+
       span.drop-top-num {
         position: absolute;
         top: 3px;
@@ -66,30 +79,35 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        line-height: 0 ;
+        line-height: 0;
       }
     }
+
     .dropdown-menu {
-      .drop-title{
+      .drop-title {
         margin-bottom: 15px;
         margin-top: 5px;
       }
+
       @extend %border-radius-lg;
-      .main-btn{
+
+      .main-btn {
         margin-bottom: 5px;
       }
+
       box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.16);
       border: 0;
-      padding:1rem 0.9rem;
+      padding: 1rem 0.9rem;
       margin-top: 20px !important;
       transition: all 0.4s ease-in-out;
       top: 0 !important;
       //transform-origin: top center;
       display: block !important;
-      transform: translate(0,40px) !important;
+      transform: translate(0, 40px) !important;
       opacity: 0;
       visibility: hidden;
-      &:before{
+
+      &:before {
         content: '';
         position: absolute;
         top: -8px;
@@ -100,17 +118,20 @@
         border-width: 0px 11px 11px 11px;
         border-color: transparent transparent #ffffff transparent;
       }
-      &.dropdown-menu-right, &.dropdown-menu-end{
+
+      &.dropdown-menu-right, &.dropdown-menu-end {
         #{$opDir}: -4px !important;
         #{$dir}: auto !important;
       }
-      &.show{
-        transform: translate(0,27px) !important;
+
+      &.show {
+        transform: translate(0, 27px) !important;
         opacity: 1;
         visibility: visible;
       }
     }
-    &.profile-top-bar-drop{
+
+    &.profile-top-bar-drop {
       img.profile-top-bar-drop-img {
         width: 40px;
         height: 40px;
@@ -118,46 +139,55 @@
         border-radius: 50%;
         border: 2px solid $page-bg-color;
       }
-      .dropdown-menu{
+
+      .dropdown-menu {
         min-width: 15rem;
-        padding:0.7rem;
-        a.dropdown-item{
+        padding: 0.7rem;
+
+        a.dropdown-item {
           background-color: $bg-blue-color;
           border-radius: 50px;
           padding: 10px 15px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          &:not(:last-child){
+
+          &:not(:last-child) {
             margin-bottom: 8px;
           }
-          .text-profile-icon-span{
+
+          .text-profile-icon-span {
             font-size: 15px;
             display: flex;
             align-items: center;
           }
-          .drop-profile-number{
+
+          .drop-profile-number {
             color: $main-blue-color;
             font-size: 15px;
           }
-          .drop-profile-icon{
+
+          .drop-profile-icon {
             width: 20px;
             text-align: center;
             display: inline-block;
             margin-#{$opDir}: 3px;
-            svg{
+
+            svg {
               max-height: 18px;
               max-width: 17px;
               //margin-#{$opDir}:4px;
-              path{
+              path {
                 transition: all ease-in-out 0.3s;
               }
             }
           }
-          &:hover{
+
+          &:hover {
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.10);
-            .drop-profile-icon svg{
-              path{
+
+            .drop-profile-icon svg {
+              path {
                 fill: $main-blue-color;
               }
             }
@@ -165,38 +195,44 @@
         }
       }
     }
-    &.search-top-bar-drop{
-      .dropdown-menu{
+
+    &.search-top-bar-drop {
+      .dropdown-menu {
         min-width: 450px;
       }
     }
   }
 }
-.dropdown-item.active, .dropdown-item:active{
+
+.dropdown-item.active, .dropdown-item:active {
   color: $black-color;
 }
-.cart-drop-list{
-  li{
-    &:not(:last-child){
+
+.cart-drop-list {
+  li {
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 }
-.cart-top-bar-drop{
-  &.dropdown.drop-svg-icon .dropdown-menu.dropdown-menu-end{
+
+.cart-top-bar-drop {
+  &.dropdown.drop-svg-icon .dropdown-menu.dropdown-menu-end {
     min-width: 400px !important;
-    @include media-breakpoint-down(sm){
-      #{$opDir}: -65px!important;
+    @include media-breakpoint-down(sm) {
+      #{$opDir}: -65px !important;
       min-width: 300px !important;
-      &:before{
+      &:before {
         right: 70px;
       }
     }
   }
-.p-text{
-  @include oneline1(2)
-}
-  .drop-cart-image{
+
+  .p-text {
+    @include oneline1(2)
+  }
+
+  .drop-cart-image {
     height: 50px;
     width: 45px;
     object-fit: contain;
@@ -204,38 +240,45 @@
     @extend %border-radius-lg;
     padding: 5px;
   }
-  .drop-cart-price{
+
+  .drop-cart-price {
     color: $red-color;
     font-weight: 800;
     font-size: 16px;
-    span{
+
+    span {
       color: $gray-color;
       font-size: 11px;
       font-weight: 700;
     }
   }
-  .del-icon{
+
+  .del-icon {
     display: block;
     background: transparent;
     border: 0;
     padding: 0;
-    svg{
+
+    svg {
       width: 23px;
       pointer-events: none;
       height: auto;
-      path{
+
+      path {
         transition: all ease-in-out 0.3s;
       }
     }
-    &:hover{
-      path{
+
+    &:hover {
+      path {
         fill: $red-color;
       }
     }
   }
 }
-.drop-cart-inc-dec{
-  input.number-cunt{
+
+.drop-cart-inc-dec {
+  input.number-cunt {
     width: 35px;
     height: 30px;
     background: $white-color;
@@ -243,54 +286,63 @@
     padding-left: 3px;
     padding-right: 3px;
   }
-  .btn{
+
+  .btn {
     border: 0;
     padding: 0 .3rem;
     height: 30px;
-    &:focus{
+
+    &:focus {
       box-shadow: none;
     }
-    svg{
+
+    svg {
       width: 11px;
       pointer-events: none;
-      path{
+
+      path {
         transition: all ease-in-out 0.3s;
       }
     }
-    &:hover{
-      svg{
-        path{
+
+    &:hover {
+      svg {
+        path {
           fill: $main-blue-color;
         }
       }
     }
   }
 }
-.notification-top-bar-drop{
-  &.dropdown.drop-svg-icon .dropdown-menu.dropdown-menu-end{
+
+.notification-top-bar-drop {
+  &.dropdown.drop-svg-icon .dropdown-menu.dropdown-menu-end {
     min-width: 450px !important;
-    @include media-breakpoint-down(md){
-      #{$opDir}: -100px!important;
-      &:before{
+    @include media-breakpoint-down(md) {
+      #{$opDir}: -100px !important;
+      &:before {
         right: 106px;
       }
     }
-    @include media-breakpoint-down(sm){
-      #{$opDir}: -68px!important;
+    @include media-breakpoint-down(sm) {
+      #{$opDir}: -68px !important;
       min-width: 300px !important;
-      &:before{
+      &:before {
         right: 70px;
       }
     }
-    .notification-drop-list{
+
+    .notification-drop-list {
       margin-top: 10px;
-      li{
-        a{
+
+      li {
+        a {
           @extend %border-radius-lg;
           transition: all ease-in-out 0.4s;
           padding: 5px 0;
           margin-bottom: 5px;
-          .notf-img{
+
+          .notf-img {
             width: 50px;
             height: 50px;
             display: flex;
@@ -298,27 +350,32 @@
             justify-content: center;
             background-color: $bg-blue-color;
             border-radius: 50%;
-            img{
+
+            img {
               max-width: 80%;
               max-height: 80%;
             }
           }
-          .notf-description{
+
+          .notf-description {
             padding-top: 8px;
             color: $gray-color;
             font-size: 13px;
             @include oneline1(2);
-            b{
+
+            b {
               color: $black-color;
               font-weight: 700;
             }
           }
-          .notf-time{
+
+          .notf-time {
             color: $main-blue-color;
             font-size: 12px;
             font-weight: 700;
           }
-          &:hover{
+
+          &:hover {
             box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.07);
             transform: translateY(-4px);
           }
