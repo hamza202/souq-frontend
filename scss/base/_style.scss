@@ -371,3 +371,147 @@ input.form-control {
     }
   }
 }
+//Store Card
+.store-card{
+  display: block;
+  @extend %border-radius-lg;
+  background-color: $bg-blue-color;
+  padding: 15px;
+  .open-status{
+    color: $gray-color;
+    font-size: 14px;
+    .open-close-store{
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-#{$opDir}:3px ;
+      background-color: $green-color;
+    }
+  }
+  &.close-store{
+    .open-status{
+      .open-close-store{
+        background-color: $gray-color;
+      }
+    }
+  }
+  .verify-img{
+    width: 20px;
+  }
+  .store-main-img{
+    text-align: center;
+    margin-top: 0.75rem;
+    img{
+      transition: all ease-in-out 0.4s;
+      width: 155px;
+      height: 155px;
+      @include media-breakpoint-down(xxl){
+        width: 140px;
+        height: 140px;
+      }
+      @include media-breakpoint-down(sm){
+        width: 100px;
+        height: 100px;
+      }
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  h4{
+    font-size: 20px;
+    font-weight: 700;
+    color: $black-color;
+    margin-top: 0.75rem;
+    @include oneline();
+  }
+  p{
+    color: $gray-color;
+    font-size: 15px;
+    @include oneline();
+
+  }
+  &:hover{
+    .store-main-img{
+      img{
+        transform: scale(1.07) rotate(5deg);
+      }
+    }
+    box-shadow: $box-shadow;
+  }
+}
+
+//rating
+.product-reviews-summary {
+  .rating-summary {
+    position: relative;
+
+    .rating-result {
+      width: 98px;
+      position: relative;
+      margin: 0 auto 10px auto;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 300;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+        text-align: right;
+        color: $gray-color;
+        font-size: 16px;
+        height: 16px;
+        letter-spacing: 2px;
+        line-height: 18px;
+        content: '\f005' '\f005' '\f005' '\f005' '\f005';
+        display: block;
+        font-style: normal;
+        font-weight: 900;
+        speak: none;
+      }
+
+      span {
+        display: block;
+        overflow: hidden;
+        font-family: 'Font Awesome 5 pro';
+
+        &:before {
+          position: relative;
+          z-index: 2;
+          text-align: right;
+          color: #FFCF5E;
+          font-size: 16px;
+          height: 17px;
+          letter-spacing: 2px;
+          line-height: 18px;
+          content: '\f005' '\f005' '\f005' '\f005' '\f005';
+          display: block;
+          font-style: normal;
+          font-weight: 900;
+          speak: none;
+        }
+      }
+    }
+  }
+}
+.col-xxl-2-5{
+  @include media-breakpoint-up(xxl){
+    width: 20%;
+  }
+}
+.may-tab{
+  background-color: $white-color;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  button{
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: Poppins, 'sans-serif';
+    font-weight: 300;
+    &.active{
+      color: $main-blue-color;
+    }
+  }
+}
