@@ -67,7 +67,7 @@
       span.drop-top-num {
         position: absolute;
         top: 3px;
-        right: 0;
+        #{$opDir}: 0;
         width: 15px;
         height: 15px;
         padding-top: 1px;
@@ -223,7 +223,7 @@
       #{$opDir}: -65px !important;
       min-width: 300px !important;
       &:before {
-        right: 70px;
+        #{$opDir}: 70px;
       }
     }
   }
@@ -283,8 +283,8 @@
     height: 30px;
     background: $white-color;
     border: 0;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-#{$dir}: 3px;
+    padding-#{$opDir}: 3px;
   }
 
   .btn {
@@ -321,14 +321,14 @@
     @include media-breakpoint-down(md) {
       #{$opDir}: -100px !important;
       &:before {
-        right: 106px;
+        #{$opDir}: 106px;
       }
     }
     @include media-breakpoint-down(sm) {
       #{$opDir}: -68px !important;
       min-width: 300px !important;
       &:before {
-        right: 70px;
+        #{$opDir}: 70px;
       }
     }
 

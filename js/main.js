@@ -93,6 +93,11 @@ let main = (function () {
             }
         });
     };
+    let faveButton = function (){
+        $('.fave-btn').on('click', function (){
+            $(this).toggleClass('active');
+        })
+    }
 
     //plus-btnValue minus-btnValue
     let increaseDecreaseInput = function () {
@@ -130,6 +135,9 @@ let main = (function () {
             }
             if ($('.number-cunt').length) {
                 increaseDecreaseInput()
+            }
+            if ($('.fave-btn').length){
+                faveButton();
             }
         },
     };
