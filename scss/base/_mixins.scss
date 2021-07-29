@@ -323,10 +323,10 @@ $base-font-size: 15px;
 %border-radius-lg {
   border-radius: 16px;
   @include media-breakpoint-down(md) {
-    border-radius: 10px;
+    border-radius: 12px;
   }
   @include media-breakpoint-down(sm) {
-    border-radius: 8px;
+    border-radius: 10px;
   }
 }
 

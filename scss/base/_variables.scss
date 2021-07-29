@@ -9,4 +9,12 @@ $page-bg-color:#E7EEF5;
 $green-color:#2DBF4F;
 $box-shadow: 3px 3px 20px rgba(107, 107, 107, 0.34);
 $border-radius: 8px;
-$border-radius-lg: 16px;
+:root{
+  --border-radius-lg: 16px;
+  @include media-breakpoint-down(md) {
+    --border-radius-lg: 12px;
+  }
+  @include media-breakpoint-down(sm) {
+    --border-radius-lg: 10px;
+  }
+}
