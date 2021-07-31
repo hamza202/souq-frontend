@@ -552,3 +552,41 @@
     }
   }
 }
+
+.main-menu {
+  position: absolute;
+  display: block;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+  top: calc(100% - 8px);
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.4s;
+  -webkit-clip-path: polygon(0 0,100% 0%,67% 0,34% 0);
+  clip-path: polygon(0 0,100% 0%,67% 0,34% 0);
+  z-index: 15;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+  li{
+    a{
+      display: block;
+      background-color: $page-bg-color;
+      padding: 10px 15px;
+      border-bottom: 1px solid $white-color;
+      font-size: 14px;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+    &.active{
+      a{
+        color: $main-blue-color;
+      }
+    }
+  }
+  &.active{
+    visibility: visible;
+    -webkit-clip-path: polygon(0 0,100% 0%,100% 100%,0% 100%);
+    clip-path: polygon(0 0,100% 0%,100% 100%,0% 100%);
+  }
+}
