@@ -49,7 +49,7 @@ let main = (function () {
             slidesPerColumn: 2,
             spaceBetween: 10,
             pagination: {
-                el: ".swiper-pagination",
+                el: ".statistics_slider-pagination",
                 clickable: true,
             },
             breakpoints: {
@@ -76,6 +76,57 @@ let main = (function () {
             },
         });
     };
+    let swiperFeatureSlider =function () {
+        var swiper = new Swiper("#feature_slider", {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            spaceBetween: 15,
+            slidesPerGroup: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 500,
+            pagination: {
+                el: ".feature_slider-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
+                },
+                400: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                    slidesPerGroup: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                    slidesPerGroup: 2,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    slidesPerColumn: 2,
+                    slidesPerGroup: 3,
+                },
+                1400: {
+                    slidesPerView: 5,
+                    slidesPerColumn: 2,
+                    slidesPerGroup: 4,
+                },
+            },
+        });
+    }
 
     let fixedHeaderOnScroll = function () {
         $(window).scroll(function () {
@@ -130,14 +181,17 @@ let main = (function () {
             handleMenuResponsive();
             fixedHeaderOnScroll();
             handleDropDown();
-            if ($("#statistics_slider").length) {
-                swiperStatisticsSlider();
-            }
+            // if ($("#statistics_slider").length) {
+            //     swiperStatisticsSlider();
+            // }
             if ($('.number-cunt').length) {
                 increaseDecreaseInput()
             }
             if ($('.fave-btn').length){
                 faveButton();
+            }
+            if ($('#feature_slider').length){
+                swiperFeatureSlider();
             }
         },
     };
