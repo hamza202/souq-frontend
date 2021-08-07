@@ -1,0 +1,16 @@
+.form{
+  .form-select{
+    border-radius: 10px;
+    border-color: $page-bg-color;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    @include media-breakpoint-down(sm){
+      padding-top: 0.375rem;
+      padding-bottom: 0.375rem;
+    }
+    &:focus{
+      border-color: $main-blue-color;
+      box-shadow: none;
+    }
+  }
+}

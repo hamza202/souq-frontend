@@ -24,3 +24,62 @@
 .main-btn{
   @extend %my-btn;
 }
+.store-filter-btn{
+  @extend %border-radius-lg;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background-color: $bg-blue-color;
+  flex-wrap: nowrap;
+  padding: 20px 30px;
+  font-size: 20px;
+  font-family: Poppins, "sans-serif";
+  font-weight: 300;
+  span{
+    @include one-line();
+    padding-#{$opDir}: 5px;
+  }
+  svg{
+    height: 18px;
+    width: auto;
+    transition: all ease-in-out 0.3s;
+  }
+  &:after{
+    display: none !important;
+  }
+  &:hover{
+    svg{
+      transform: translateX(3px);
+    }
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 16px;
+    padding: 15px 20px;
+    svg{
+      height: 14px;
+    }
+  }
+}
+.filter-btn{
+  position: relative;
+  svg{
+    margin-top: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    width: 22px;
+    rect{
+      fill: $white-color;
+      transition: all ease-in-out 0.3s;
+      height: 25px;
+    }
+  }
+  &:hover{
+    svg rect{
+      fill: $main-blue-color;
+    }
+  }
+}

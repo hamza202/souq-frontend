@@ -258,26 +258,26 @@
     }
   }
 
-  .del-icon {
-    display: block;
-    background: transparent;
-    border: 0;
-    padding: 0;
+}
+.del-icon {
+  display: block;
+  background: transparent;
+  border: 0;
+  padding: 0;
 
-    svg {
-      width: 23px;
-      pointer-events: none;
-      height: auto;
+  svg {
+    width: 23px;
+    pointer-events: none;
+    height: auto;
 
-      path {
-        transition: all ease-in-out 0.3s;
-      }
+    path {
+      transition: all ease-in-out 0.3s;
     }
+  }
 
-    &:hover {
-      path {
-        fill: $red-color;
-      }
+  &:hover {
+    path {
+      fill: $red-color;
     }
   }
 }
@@ -568,6 +568,9 @@
   list-style-type: none;
   width: 100%;
   padding-left: 0;
+  @include media-breakpoint-up(xl){
+    display: none;
+  }
   li{
     a{
       display: block;
