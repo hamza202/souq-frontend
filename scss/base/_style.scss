@@ -642,7 +642,12 @@ input.form-control {
 
 .serves-card {
   height: 100%;
-
+  display: flex;
+  flex-wrap: wrap;
+  >.row{
+    width: 100%;
+    align-self: flex-end;
+  }
   .product-store-name {
     margin-top: 10px;
   }
@@ -658,7 +663,9 @@ input.form-control {
   }
 
   & > p {
+    width: 100%;
     font-size: 17px;
+    @include oneline1(3);
     @include media-breakpoint-down(xxl) {
       font-size: 15px;
     }
