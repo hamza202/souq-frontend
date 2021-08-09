@@ -119,7 +119,7 @@ let main = (function () {
                     slidesPerColumn: 2,
                     slidesPerGroup: 3,
                 },
-                1400: {
+                1600: {
                     slidesPerView: 5,
                     slidesPerColumn: 2,
                     slidesPerGroup: 4,
