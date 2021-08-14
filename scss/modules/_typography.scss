@@ -1,4 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:wght@300;400;600&display=swap');
+%title-2{
+  font-size: 20px;
+  font-weight: 700;
+  color: $black-color;
+  @include media-breakpoint-down(sm){
+    font-size: 17px;
+  }
+}
+.title-2 {
+  @extend %title-2;
+}
 
+%title-3{
+  font-size: 15px;
+  font-weight: 700;
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+.title-3{
+  @extend %title-3
+}
+%text-1{
+  font-size: 17px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+.text-1{
+  @extend %text-1
+}
+%text-2{
+  font-size: 16px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+.text-2{
+  @extend %text-2
+}
 //font-family: 'Almarai', sans-serif;
 //font-family: 'Poppins', sans-serif;

@@ -318,6 +318,27 @@
       }
     }
   }
+  &.big-inc-dec{
+    border-radius: 100px;
+    border: 1px solid $bg-blue-color;
+    overflow: hidden;
+    input.number-cunt{
+      width: 50px;
+      height: 35px;
+    }
+    .btn{
+      padding: 0 0.7rem;
+      height: 35px;
+      &:hover{
+        background-color: $main-blue-color;
+        svg{
+          path{
+            fill: $white-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 .notification-top-bar-drop {
