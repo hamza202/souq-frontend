@@ -570,9 +570,11 @@ input.form-control {
     color: $black-color;
     font-family: Poppins, 'sans-serif';
   }
-  &.big-new-price{
+
+  &.big-new-price {
     font-size: 20px;
-    span{
+
+    span {
       font-size: 14px;
     }
   }
@@ -592,6 +594,7 @@ input.form-control {
     font-family: Poppins, 'sans-serif';
   }
 }
+
 .fave-btn {
   padding: 0;
   background-color: transparent;
@@ -1028,23 +1031,9 @@ input.form-control {
   }
 }
 
-.parsley-errors-list {
-  list-style: none;
-  padding-#{$dir}: 5px;
-  position: absolute;
-  bottom: -20px;
-  color: #EB402E;
-  font-size: 14px;
-  margin: 0;
-}
-
-.input-container {
-  position: relative;
-  margin-bottom: 25px;
-}
-
 .request-container {
   background-color: $bg-blue-color;
+  display: block;
   @extend %border-radius-lg;
   padding: 20px;
   @include media-breakpoint-down(sm) {
@@ -1060,12 +1049,16 @@ input.form-control {
 
   h3 {
     @extend %title-3;
+    color: $black-color;
   }
 
   p {
     @extend %text-2;
     color: $gray-color;
     @include oneline1(2);
+  }
+  &:hover{
+    box-shadow: $box-shadow;
   }
 }
 
@@ -1094,7 +1087,7 @@ input.form-control {
     @include media-breakpoint-up(xxl) {
       height: 450px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       height: 270px;
     }
   }
@@ -1111,10 +1104,10 @@ input.form-control {
     @include media-breakpoint-up(xxl) {
       height: 120px;
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       height: 100px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       height: 70px;
     }
   }
@@ -1209,9 +1202,9 @@ input.form-control {
 .product-color li label:after {
   content: "✖";
   position: absolute;
-  left: 50%;
+  #{$dir}: 50%;
   top: 50%;
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   font-size: calc(var(--color-check-size) / 2);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -1219,19 +1212,22 @@ input.form-control {
   moz-transition: opacity 0.3s ease-in-out;
   o-transition: opacity 0.3s ease-in-out;
 }
-.product-size-list{
-  li{
-    input{
+
+.product-size-list {
+  li {
+    input {
       position: absolute;
       #{$dir}: 0;
       top: -300%;
       opacity: 0;
       visibility: hidden;
-      &:checked + label{
+
+      &:checked + label {
         border-color: $main-blue-color;
       }
     }
-    label{
+
+    label {
       padding: 7px 8px;
       border: 1px solid $bg-blue-color;
       border-radius: 8px;
@@ -1241,5 +1237,181 @@ input.form-control {
       transition: border-color 0.3s ease-in-out;
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+.big-title-icon {
+  font-size: 37px;
+  font-weight: 700;
+  font-family: Poppins, "sans-serif";
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(xxl) {
+    font-size: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+
+  svg {
+    margin-#{$opDir}: 0.7rem;
+    height: 1.2em;
+    width: auto;
+  }
+}
+
+.store-icon-name {
+  img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    @include media-breakpoint-down(sm) {
+      width: 40px;
+      height: 40px;
+    }
+
+  }
+}
+
+.my-cart-container {
+  margin-bottom: 0.75rem;
+  background-color: $bg-blue-color;
+  @extend %border-radius-lg;
+
+  .my-cart-header {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    @include media-breakpoint-down(sm) {
+      padding: 0.75rem;
+    }
+  }
+
+  .my-cart-content {
+    padding: 1rem;
+    @include media-breakpoint-down(sm) {
+      padding: 0.75rem;
+    }
+
+    .my-cart-item {
+      img {
+        width: 60px;
+        height: 60px;
+        @extend %border-radius-lg;
+        object-fit: cover;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+  }
+
+  .my-cart-footer {
+    padding: 1rem;
+    border-top: 1px solid $border-color;
+    @include media-breakpoint-down(sm) {
+      padding: 0.75rem;
+    }
+  }
+}
+
+.delete-link {
+  color: $gray-color;
+  font-family: Poppins, "sans-serif";
+  font-size: 16px;
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $red-color;
+  }
+}
+.total-cart{
+  font-size:17px;
+  vert-align: middle;
+  font-weight: 600;
+  font-family: Poppins, "sans-serif";
+  @include media-breakpoint-down(sm){
+    font-size: 15px;
+  }
+  span{
+    font-size: 22px;
+    color: $red-color;
+    font-family: 'Almarai', sans-serif;
+    @include media-breakpoint-down(sm){
+      font-size: 18px;
+    }
+  }
+}
+.main-card{
+  background-color: $bg-blue-color;
+  padding: 1rem;
+  @include media-breakpoint-down(sm) {
+    padding: 0.75rem;
+  }
+  @extend %border-radius-lg;
+}
+.edit-profile-photo{
+  position: relative;
+  display: inline-block;
+  label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $main-blue-color;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    #{$opDir}: 10px;
+    border: 4px solid #fff;
+    svg{
+      width:20px ;
+      height: auto;
+    }
+  }
+  img{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  .change-photo-btn{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    #{$dir}: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  .photoUpload{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  input{
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
   }
 }

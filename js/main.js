@@ -231,6 +231,25 @@ let main = (function () {
         });
     }
 
+    let imgUpload = function (){
+        // var input = $(".edit-profile-photo input");
+        var readURL = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.pic1').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+        $(".up1").on('change', function(){
+            readURL(this);
+        });
+    }
+
+
 
     return {
         init: function () {
@@ -254,6 +273,9 @@ let main = (function () {
             }
             if ($(".mySwiper").length){
                 productDetailsSlider();
+            }
+            if ($(".pic1").length){
+                imgUpload();
             }
         },
     };
