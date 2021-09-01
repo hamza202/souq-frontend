@@ -19,8 +19,31 @@
     color: $main-blue-color;
   }
 }
+
 .main-btn{
   @extend %my-btn;
+}
+.del-btn{
+  @extend %my-btn;
+  background-color: $white-color;
+  color: $gray-color;
+  border-color: $white-color;
+  &.icon-btn{
+    svg{
+      height: 1.2em;
+      margin-#{$opDir}:3px ;
+    }
+  }
+  &:hover{
+    color: white;
+    background-color: $red-color;
+    border-color: $red-color;
+    svg{
+      path{
+        fill: $white-color;
+      }
+    }
+  }
 }
 .light-blue-btn{
   @extend %my-btn;

@@ -551,10 +551,10 @@ input.form-control {
   @extend %border-radius-lg;
   border: 2px solid $bg-blue-color;
   overflow: hidden;
-  @include media-breakpoint-down(sm) {
-    max-width: 220px;
-    margin: 0 auto;
-  }
+  //@include media-breakpoint-down(sm) {
+  //  max-width: 220px;
+  //  margin: 0 auto;
+  //}
 
   .top-product-part {
     position: relative;
@@ -585,7 +585,7 @@ input.form-control {
       height: 190px;
     }
     @include media-breakpoint-down(sm) {
-      height: 213px;
+      height: 310px;
     }
     object-fit: cover;
   }
@@ -1732,6 +1732,13 @@ input.form-control {
     background-color: #fff;
     &:hover{
       border-color: $main-blue-color;
+    }
+  }
+}
+.address-container{
+  .address-card{
+    &:not(:last-child){
+      margin-bottom: 1rem;
     }
   }
 }
