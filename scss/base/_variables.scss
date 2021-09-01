@@ -1,6 +1,7 @@
 $white-color: #fff;
 $black-color: #000000;
 $main-blue-color:#0086BC;
+$text-black:#212121;
 $bg-blue-color:#F8FBFF;
 $red-color:#F10404;
 $light-gray-color:#EFF2F6;
@@ -18,4 +19,7 @@ $border-radius: 8px;
   @include media-breakpoint-down(sm) {
     --border-radius-lg: 10px;
   }
+}
+.text-black{
+  color: $text-black !important;
 }

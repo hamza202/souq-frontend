@@ -127,6 +127,45 @@ let main = (function () {
         });
     }
 
+    let albumSwiper = function () {
+        var swiper = new Swiper("#album_slider", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            speed: 500,
+            pagination: {
+                el: ".album_slider-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1600: {
+                    slidesPerView: 4,
+                }
+            },
+        });
+    }
+
     let productDetailsSlider = function () {
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 10,
@@ -231,9 +270,9 @@ let main = (function () {
         });
     }
 
-    let imgUpload = function (){
+    let imgUpload = function () {
         // var input = $(".edit-profile-photo input");
-        var readURL = function(input) {
+        var readURL = function (input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
@@ -244,11 +283,16 @@ let main = (function () {
                 reader.readAsDataURL(input.files[0]);
             }
         };
-        $(".up1").on('change', function(){
+        $(".up1").on('change', function () {
             readURL(this);
         });
     }
 
+    let galleryFancybox = function () {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // hideClass: false,
+        });
+    }
 
 
     return {
@@ -262,6 +306,9 @@ let main = (function () {
             if ($('.number-cunt').length) {
                 increaseDecreaseInput()
             }
+            if (("#album_slider").length) {
+                albumSwiper();
+            }
             if ($('.fave-btn').length) {
                 faveButton();
             }
@@ -271,12 +318,17 @@ let main = (function () {
             if ($(".copy-btn").length) {
                 shareButton();
             }
-            if ($(".mySwiper").length){
+            if ($(".mySwiper").length) {
                 productDetailsSlider();
             }
-            if ($(".pic1").length){
+            if ($(".pic1").length) {
                 imgUpload();
             }
+            if($('[data-fancybox="gallery"]').length){
+                galleryFancybox();
+            }
+
+
         },
     };
 })();

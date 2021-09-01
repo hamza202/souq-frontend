@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="56" viewBox="0 0 165 56">
+  <g id="Group_1441" data-name="Group 1441" transform="translate(-213 -548)">
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="165" height="56" rx="10" transform="translate(213 548)"/>
+    <g id="Group_1438" data-name="Group 1438" transform="translate(-5.805 1)">
+      <path id="Icon_awesome-google-play" data-name="Icon awesome-google-play" d="M17.187,12.034,5.852.668,20.273,8.947l-3.087,3.087ZM2.893,0A2,2,0,0,0,1.779,1.813V24.478a2,2,0,0,0,1.115,1.813L16.072,13.143ZM24.731,11.587,21.706,9.835l-3.374,3.313,3.374,3.313,3.087-1.751a2.06,2.06,0,0,0-.062-3.123ZM5.852,25.628l14.422-8.279-3.087-3.087Z" transform="translate(236.371 561.602)" fill="#fff"/>
+      <text id="Title" transform="translate(271.195 581)" fill="#fff" font-size="18" font-family="Almarai-Regular, Almarai"><tspan x="0" y="0">Google Play</tspan></text>
+    </g>
+  </g>
+</svg>

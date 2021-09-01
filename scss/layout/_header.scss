@@ -1,4 +1,4 @@
-.header-logo {
+.header-logo{
   img {
     max-height: 50px;
     width: auto;
@@ -15,7 +15,26 @@
     }
   }
 }
-
+.header-comp-logo{
+  img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 55px;
+    width: 55px;
+    @include media-breakpoint-up(xxl) {
+      height: 70px;
+      width: 70px;
+    }
+    @include media-breakpoint-down(md) {
+      height: 50px;
+      width: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
 .top-bar {
   padding: 30px 0 20px 0;
   @include media-breakpoint-down(xxl) {
@@ -579,7 +598,10 @@
   position: absolute;
   display: block;
   box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
-  top: calc(100% - 8px);
+  top: 77px;
+  @include media-breakpoint-down(sm){
+    top: 65px;
+  }
   left: 0;
   right: 0;
   visibility: hidden;
@@ -594,13 +616,29 @@
     display: none;
   }
   li{
+    p{
+      padding: 10px 15px 10px 8px;
+      background-color: #fff;
+      color: $black-color;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      border-left: 3px solid $bg-blue-color;
+      border-right: 3px solid $bg-blue-color;
+      svg{
+        height: 1em;
+        width: auto;
+      }
+    }
     a{
       display: block;
       background-color: $page-bg-color;
       padding: 10px 15px;
       border-bottom: 1px solid $white-color;
       font-size: 14px;
-      color: #1a1a1a;
+      color: $black-color;
       font-weight: 500;
     }
     &.active{
@@ -613,5 +651,27 @@
     visibility: visible;
     -webkit-clip-path: polygon(0 0,100% 0%,100% 100%,0% 100%);
     clip-path: polygon(0 0,100% 0%,100% 100%,0% 100%);
+  }
+}
+.fre-delivery{
+  img{
+    height: 20px;
+    width: auto;
+  }
+}
+.company-statics{
+  .star-count{
+    position: relative;
+    span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -40%);
+      font-size: 13px;
+    }
+  }
+  img{
+    height: 27px;
+    width: auto;
   }
 }

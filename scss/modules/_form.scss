@@ -35,7 +35,7 @@
 }
 .input-container {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   &.icon-input{
     input{
       padding-left: 40px;
@@ -62,7 +62,7 @@
   list-style: none;
   padding-#{$dir}: 5px;
   position: absolute;
-  bottom: -20px;
+  bottom: -17px;
   color: #EB402E;
   font-size: 14px;
   margin: 0;
