@@ -1190,7 +1190,9 @@ input.form-control {
 .gray-color {
   color: $gray-color !important;
 }
-
+.main-blue-color{
+  color: $main-blue-color !important;
+}
 .fw-500 {
   font-weight: 500 !important;
 }
@@ -1370,6 +1372,12 @@ input.form-control {
 
       &:not(:last-child) {
         margin-bottom: 0.75rem;
+      }
+      .drop-cart-price{
+        @extend %text-2;
+        span{
+          font-size: 0.8em;
+        }
       }
     }
 
@@ -1795,6 +1803,9 @@ input.form-control {
     color: $black-color;
     display: block;
     text-align: center;
+    small{
+      font-size: 0.7em;
+    }
   }
   span.order-info-title{
     font-size: 13px;
@@ -1830,5 +1841,15 @@ input.form-control {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' viewBox='0 0 27 27'%3E%3Cg id='Group_1442' data-name='Group 1442' transform='translate(-75.582 -138.5)'%3E%3Ccircle id='Ellipse_154' data-name='Ellipse 154' cx='13.5' cy='13.5' r='13.5' transform='translate(75.582 138.5)' fill='%230086bc'/%3E%3Cpath id='Icon_material-done' data-name='Icon material-done' d='M8.2,18.57,7.933,18.3,3.25,13.615l-.271-.271.271-.271L4.421,11.9l.271-.271.271.271L8.2,15.144,16.8,6.55l.271-.271.271.271,1.171,1.171.271.271-.271.271L8.475,18.3Z' transform='translate(77.848 139.93)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");      }
     }
 
+  }
+}
+.od-qty{
+  background-color: $white-color;
+  width: 60px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 60px;
+  p{
+      @extend %text-2;
   }
 }
