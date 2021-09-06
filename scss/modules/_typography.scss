@@ -62,5 +62,17 @@ $bootstrap-font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neu
 .text-2{
   @extend %text-2
 }
+%big-text{
+  font-size: 18px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 17px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 15px;
+  }
+}
+.big-text{
+  @extend %big-text;
+}
 //font-family: 'Almarai', sans-serif;
 //font-family: 'Poppins', sans-serif;

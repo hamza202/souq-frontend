@@ -1774,3 +1774,61 @@ input.form-control {
   height: 50px;
   border-radius: 5px;
 }
+.order-card{
+  display: block;
+  padding: 0.7rem;
+  background-color: $bg-blue-color;
+  @extend %border-radius-lg;
+  img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    @include media-breakpoint-up(xxl){
+      width: 70px;
+      height: 70px;
+    }
+  }
+  span{
+    text-align: center;
+  }
+  span.big-text{
+    color: $black-color;
+    display: block;
+    text-align: center;
+  }
+  span.order-info-title{
+    font-size: 13px;
+    color: $gray-color;
+    display: block;
+    text-align: center;
+  }
+  &:hover{
+    box-shadow: $box-shadow;
+  }
+  .order-img-container{
+    display: inline-block;
+    position: relative;
+  }
+}
+.accepted-order{
+  .order-card{
+    .order-img-container{
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        #{$opDir}: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        @include media-breakpoint-up(xxl){
+          width: 25px;
+          height: 25px;
+        }
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' viewBox='0 0 27 27'%3E%3Cg id='Group_1442' data-name='Group 1442' transform='translate(-75.582 -138.5)'%3E%3Ccircle id='Ellipse_154' data-name='Ellipse 154' cx='13.5' cy='13.5' r='13.5' transform='translate(75.582 138.5)' fill='%230086bc'/%3E%3Cpath id='Icon_material-done' data-name='Icon material-done' d='M8.2,18.57,7.933,18.3,3.25,13.615l-.271-.271.271-.271L4.421,11.9l.271-.271.271.271L8.2,15.144,16.8,6.55l.271-.271.271.271,1.171,1.171.271.271-.271.271L8.475,18.3Z' transform='translate(77.848 139.93)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");      }
+    }
+
+  }
+}
