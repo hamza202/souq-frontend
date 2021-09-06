@@ -293,7 +293,19 @@ let main = (function () {
             // hideClass: false,
         });
     }
-
+    let tit_width = function () {
+            let phoneInput = $('.iti--allow-dropdown');
+            let phoneNumberDrop = $(".iti__country-list")
+            let phoneInputWidth = phoneInput.width();
+            phoneNumberDrop.css('width', phoneInputWidth + 'px')
+            $(window).on('resize', function () {
+                let phoneInputWidth = phoneInput.width();
+                phoneNumberDrop.css('width', phoneInputWidth + 'px');
+            });
+    };
+    $("#newUserModal").on("shown.bs.modal", function (){
+        tit_width()
+    })
 
     return {
         init: function () {
@@ -303,6 +315,9 @@ let main = (function () {
             // if ($("#statistics_slider").length) {
             //     swiperStatisticsSlider();
             // }
+            if ($(".tit-input").length) {
+                tit_width();
+            }
             if ($('.number-cunt').length) {
                 increaseDecreaseInput()
             }

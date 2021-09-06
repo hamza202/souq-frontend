@@ -1712,6 +1712,12 @@ input.form-control {
     color: darken($main-blue-color,30%);
   }
 }
+.gray-link{
+  color: $gray-color;
+  &hover{
+    color: $main-blue-color;
+  }
+}
 .comp-contact-info{
   a{
     display: flex;
@@ -1724,6 +1730,8 @@ input.form-control {
     }
     img{
       margin-#{$opDir}:8px ;
+      max-height: 28px;
+      max-width: 21px;
     }
   }
 }
@@ -1741,4 +1749,28 @@ input.form-control {
       margin-bottom: 1rem;
     }
   }
+}
+.iti{
+  width: 100%;
+}
+.iti__country-list{
+  margin: 2px 0 0 -1px;
+  overflow-x: hidden;
+}
+.iti__arrow{
+  display: none;
+}
+.iti__country-list::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+.iti__country-list::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.iti__country-list::-webkit-scrollbar-thumb {
+  background-color: $main-blue-color;
+  height: 50px;
+  border-radius: 5px;
 }

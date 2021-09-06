@@ -1,4 +1,4 @@
-%my-btn{
+%my-btn {
   display: inline-block;
   vertical-align: middle;
   background-color: $main-blue-color;
@@ -10,73 +10,85 @@
   @include media-breakpoint-down(md) {
     border-radius: 6px;
   }
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     padding: 6px 25px;
     border-radius: 4px;
   }
-  &:hover{
+
+  &:hover {
     background-color: transparent;
     color: $main-blue-color;
   }
 }
 
-.main-btn{
+.main-btn {
   @extend %my-btn;
 }
-.del-btn{
+
+.del-btn {
   @extend %my-btn;
   background-color: $white-color;
   color: $gray-color;
   border-color: $white-color;
-  &.icon-btn{
-    svg{
+
+  &.icon-btn {
+    svg {
       height: 1.2em;
-      margin-#{$opDir}:3px ;
+      margin-#{$opDir}: 3px;
     }
   }
-  &:hover{
+
+  &:hover {
     color: white;
     background-color: $red-color;
     border-color: $red-color;
-    svg{
-      path{
+
+    svg {
+      path {
         fill: $white-color;
       }
     }
   }
 }
-.light-blue-btn{
+
+.light-blue-btn {
   @extend %my-btn;
   background-color: $bg-blue-color;
   color: $black-color;
   border-color: $bg-blue-color;
-  &:hover{
+
+  &:hover {
     background-color: $main-blue-color;
     color: $bg-blue-color;
-    svg{
-      path{
+
+    svg {
+      path {
         fill: $bg-blue-color;
       }
     }
   }
 }
-.icon-btn{
+
+.icon-btn {
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  svg{
+
+  svg {
     height: 25px;
     width: auto;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       height: 20px;
     }
-    path{
+
+    path {
       transition: all ease-in-out 0.3s;
     }
   }
 }
-.store-filter-btn{
+
+.store-filter-btn {
   @extend %border-radius-lg;
   display: flex;
   width: 100%;
@@ -89,71 +101,148 @@
   font-size: 20px;
   font-family: Poppins, "sans-serif";
   font-weight: 300;
-  span{
+
+  span {
     @include one-line();
     padding-#{$opDir}: 5px;
   }
-  svg{
+
+  svg {
     height: 18px;
     width: auto;
     transition: all ease-in-out 0.3s;
   }
-  &:after{
+
+  &:after {
     display: none !important;
   }
-  &:hover{
-    svg{
+
+  &:hover {
+    svg {
       transform: translateX(3px);
     }
   }
-  @include media-breakpoint-down(sm){
+
+  @include media-breakpoint-down(sm) {
     font-size: 16px;
     padding: 15px 20px;
-    svg{
+    svg {
       height: 14px;
     }
   }
 }
-.filter-btn{
+
+.filter-btn {
   position: relative;
-  svg{
+
+  svg {
     margin-top: 2px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
     width: 22px;
-    rect{
+
+    rect {
       fill: $white-color;
       transition: all ease-in-out 0.3s;
       height: 25px;
     }
   }
-  &:hover{
-    svg rect{
+
+  &:hover {
+    svg rect {
       fill: $main-blue-color;
     }
   }
 }
-.share-btn{
+
+.share-btn {
   padding: 0;
   border: 0;
   background-color: transparent;
-  svg{
+
+  svg {
     height: 27px;
   }
 }
-.sent-comment-btn{
+
+.sent-comment-btn {
   @extend %my-btn;
   padding: 15px;
   height: calc(100% - 0.25rem - 2px);
   display: flex;
   align-items: center;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: $main-blue-color;
       }
+    }
+  }
+}
+
+.tab-btn {
+  @extend %my-btn;
+  color: $gray-color;
+  border: 1px solid $gray-color;
+  background-color: $white-color;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+
+  &.active {
+    border-color: $main-blue-color;
+    color: $black-color;
+  }
+
+  &:hover {
+    color: $black-color;
+  }
+}
+
+.auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black-color;
+
+  span {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: $bg-blue-color;
+    border-radius: 50px;
+    margin-#{$opDir}: 5px;
+    transition: all ease-in-out 0.3s;
+
+    svg {
+      height: 20px;
+      max-width: 18px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 25px;
+      height: 25px;
+      svg {
+        height: 16px;
+        max-width: 14px;
+      }
+    }
+
+  }
+  @include media-breakpoint-down(sm){
+    p{
+      display: none;
+    }
+  }
+  &:hover {
+    color: $main-blue-color;
+
+    span {
+      background-color: $page-bg-color;
     }
   }
 }

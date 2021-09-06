@@ -1,3 +1,5 @@
+@import "fancybox.css";
+@import "intlTelInput.css";
 @import 'bootstrap-sass/_functions.scss';
 @import 'bootstrap-sass/_variables.scss';
 @import 'bootstrap-sass/mixins/_breakpoints.scss';
@@ -8,6 +10,7 @@
 @import 'modules/_typography.scss';
 @import 'modules/_components.scss';
 @import 'modules/_buttons.scss';
+@import 'modules/_blocks.scss';
 @import 'modules/_form';
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
