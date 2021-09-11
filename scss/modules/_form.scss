@@ -4,6 +4,9 @@
   padding-top: 0.65rem;
   padding-bottom: 0.65rem;
   height: auto;
+  @include media-breakpoint-down(xxl){
+  font-size: 15px;
+  }
   @include media-breakpoint-down(sm){
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;

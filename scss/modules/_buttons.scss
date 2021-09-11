@@ -24,7 +24,14 @@
 .main-btn {
   @extend %my-btn;
 }
-
+.gray-btn{
+  @extend %my-btn;
+  background-color: $gray-color;
+  border-color: $gray-color;
+  &:hover{
+    color: $gray-color;
+  }
+}
 .del-btn {
   @extend %my-btn;
   background-color: $white-color;
