@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SOUQ ALKHALEJ || Home </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body dir="ltr">
+<div class="page-container">
+    <div class="main-container">
+        <header>
+            <div class="container-content">
+                <div class="top-bar">
+                    <div class="row align-items-center justify-content-between gx-2 gx-md-3">
+                        <div class="col-xxl-2 col-lg-3 col order-0">
+                            <div class="header-logo text-lg-center">
+                                <a class="d-inline-block" href="#">
+                                    <img src="images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl order-xl-2 order-4">
+                            <div class="row gx-3 flex-nowrap align-items-center">
+                                <div class="col">
+                                    <div class="form">
+                                        <div class="search-input map-search-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22.994" height="23" viewBox="0 0 22.994 23">
+                                                <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M27.224,25.828l-6.4-6.455a9.114,9.114,0,1,0-1.383,1.4L25.8,27.187a.984.984,0,0,0,1.389.036A.991.991,0,0,0,27.224,25.828ZM13.668,20.852a7.2,7.2,0,1,1,5.09-2.108A7.152,7.152,0,0,1,13.668,20.852Z" transform="translate(-4.5 -4.493)" fill="#0086bc"></path>
+                                            </svg>
+                                            <input type="text" id="map_search" onkeyup="searchFilter()" class="form-control" placeholder="Search...">
+                                            <ul id="searchURL" class="list-unstyled">
+                                                <li><a data-long="2.321236" data-lat="48.865633" href="javascript:void(0)">jahez</a></li>
+                                                <li><a data-long="2.354808" data-lat="48.854183" href="javascript:void(0)">shop1</a></li>
+                                                <li><a data-long="2.342348" data-lat="48.863893" href="javascript:void(0)">shop2</a></li>
+                                                <li><a data-long="2.352245" data-lat="48.860642" href="javascript:void(0)">shop3</a></li>
+                                                <li><a data-long="2.294481" data-lat="48.858370" href="javascript:void(0)">shop4</a></li>
+                                                <li><a data-long="2.335387" data-lat="48.837273" href="javascript:void(0)">shop5</a></li>
+                                                <li><a data-long="2.354507" data-lat="48.860819" href="javascript:void(0)">shop6</a></li>
+                                                <li><a data-long="2.333328" data-lat="48.853798" href="javascript:void(0)">shop7</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="text-xl-end text-center mt-xl-0 mt-3">
+                                        <a class="auth-btn" data-bs-toggle="modal" href="#mapFilterModal" role="button">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19.458" height="17.712" viewBox="0 0 19.458 17.712">
+                                              <path id="Icon_feather-filter" data-name="Icon feather-filter" d="M20.458,4.5H3l6.983,8.258v5.709l3.492,1.746V12.758Z" transform="translate(-2 -3.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                            </svg>
+                                        </span>
+                                            <p>Filter</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-bar-drop-list col-lg-3 col-auto text-center ms-lg-auto order-xl-3 order-2">
+                            <div class="d-flex align-items-center justify-content-evenly">
+                                <div class="dropdown search-top-bar-drop drop-svg-icon">
+                                    <a class="dropdown-toggle" href="#" role="button" data-bs-auto-close="outside"
+                                       id="dropdownSearch"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.651 24.657">
+                                            <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search"
+                                                  d="M28.862,27.365l-6.856-6.92a9.77,9.77,0,1,0-1.483,1.5l6.811,6.875a1.055,1.055,0,0,0,1.489.039A1.062,1.062,0,0,0,28.862,27.365ZM14.328,22.031a7.715,7.715,0,1,1,5.456-2.26A7.667,7.667,0,0,1,14.328,22.031Z"
+                                                  transform="translate(-4.5 -4.493)"/>
+                                        </svg>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownSearch">
+                                        <form action="#">
+                                            <div class="row flex-nowrap gx-2">
+                                                <div class="col">
+                                                    <div class="search-input">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22.994"
+                                                             height="23" viewBox="0 0 22.994 23">
+                                                            <path id="Icon_ionic-ios-search"
+                                                                  data-name="Icon ionic-ios-search"
+                                                                  d="M27.224,25.828l-6.4-6.455a9.114,9.114,0,1,0-1.383,1.4L25.8,27.187a.984.984,0,0,0,1.389.036A.991.991,0,0,0,27.224,25.828ZM13.668,20.852a7.2,7.2,0,1,1,5.09-2.108A7.152,7.152,0,0,1,13.668,20.852Z"
+                                                                  transform="translate(-4.5 -4.493)" fill="#0086bc"/>
+                                                        </svg>
+                                                        <input type="text" class="form-control" placeholder="Search...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button class="main-btn mb-0 px-sm-4 px-3">
+                                                        Search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="dropdown notification-top-bar-drop drop-svg-icon">
+                                    <a class="dropdown-toggle" href="#" role="button" data-bs-auto-close="outside"
+                                       id="dropdownNotification"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="drop-top-num">
+                                            4
+                                        </span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19.633" height="24.573"
+                                             viewBox="0 0 19.633 24.573">
+                                            <g id="Icon_ionic-ios-notifications-outline"
+                                               data-name="Icon ionic-ios-notifications-outline"
+                                               transform="translate(-6.775 -3.93)">
+                                                <path id="Path_1278" data-name="Path 1278"
+                                                      d="M19.653,28.336a.8.8,0,0,0-.78.626,1.539,1.539,0,0,1-.307.669,1.161,1.161,0,0,1-.989.362,1.18,1.18,0,0,1-.989-.362,1.539,1.539,0,0,1-.307-.669.8.8,0,0,0-.78-.626h0a.8.8,0,0,0-.78.977,2.744,2.744,0,0,0,2.856,2.279,2.739,2.739,0,0,0,2.856-2.279.8.8,0,0,0-.78-.977Z"
+                                                      transform="translate(-1.003 -3.087)"/>
+                                                <path id="Path_1279" data-name="Path 1279"
+                                                      d="M26.161,22.129c-.946-1.247-2.807-1.978-2.807-7.561,0-5.73-2.53-8.034-4.889-8.586-.221-.055-.381-.129-.381-.362V5.441A1.506,1.506,0,0,0,16.611,3.93h-.037A1.506,1.506,0,0,0,15.1,5.441v.178c0,.227-.16.307-.381.362-2.365.559-4.889,2.856-4.889,8.586,0,5.583-1.861,6.308-2.807,7.561A1.219,1.219,0,0,0,8,24.082H25.2A1.22,1.22,0,0,0,26.161,22.129Zm-2.4.356H9.443a.269.269,0,0,1-.2-.448,7.441,7.441,0,0,0,1.29-2.051,13.918,13.918,0,0,0,.878-5.417,9.419,9.419,0,0,1,1.284-5.331,3.941,3.941,0,0,1,2.377-1.7A2.152,2.152,0,0,0,16.212,6.9a.486.486,0,0,1,.731-.012,2.225,2.225,0,0,0,1.155.657,3.941,3.941,0,0,1,2.377,1.7,9.419,9.419,0,0,1,1.284,5.331,13.918,13.918,0,0,0,.878,5.417,7.526,7.526,0,0,0,1.32,2.082A.254.254,0,0,1,23.766,22.485Z"
+                                                      transform="translate(0 0)"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownNotification">
+                                        <h5 class="drop-title text-center">
+                                            Notification
+                                        </h5>
+                                        <ul class="notification-drop-list list-unstyled">
+                                            <li>
+                                                <a href="#" class="row align-items-center justify-content-center gx-2">
+                                                    <span class="col-auto">
+                                                        <span class="notf-img">
+                                                            <img src="images/logo-icon.png" alt="logo-icon">
+                                                        </span>
+                                                    </span>
+                                                    <span class="col">
+                                                        <span class="notf-description">
+                                                            <b>SOUQ ALKHALEJ</b> BlueHostExtremely fast & reliable hosting with plenty of advanced security add-ons
+                                                        </span>
+                                                        <span class="notf-time">
+                                                            2 hours ago
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="row align-items-center justify-content-center gx-2">
+                                                    <span class="col-auto">
+                                                        <span class="notf-img">
+                                                            <img src="images/logo-icon.png" alt="logo-icon">
+                                                        </span>
+                                                    </span>
+                                                    <span class="col">
+                                                        <span class="notf-description">
+                                                            <b>SOUQ ALKHALEJ</b> BlueHostExtremely fast & reliable hosting with plenty of advanced security add-ons
+                                                        </span>
+                                                        <span class="notf-time">
+                                                            2 hours ago
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="row align-items-center justify-content-center gx-2">
+                                                    <span class="col-auto">
+                                                        <span class="notf-img">
+                                                            <img src="images/logo-icon.png" alt="logo-icon">
+                                                        </span>
+                                                    </span>
+                                                    <span class="col">
+                                                        <span class="notf-description">
+                                                            <b>SOUQ ALKHALEJ</b> BlueHostExtremely fast & reliable hosting with plenty of advanced security add-ons BlueHostExtremely fast & reliable hosting with plenty of advanced security add-ons BlueHostExtremely fast & reliable hosting with plenty of advanced security add-ons
+                                                        </span>
+                                                        <span class="notf-time">
+                                                            2 hours ago
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown cart-top-bar-drop drop-svg-icon">
+                                    <a class="dropdown-toggle" href="#" role="button" data-bs-auto-close="outside"
+                                       id="dropdownMenuLink"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="drop-top-num">
+                                            12
+                                        </span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.736 24.657">
+                                            <g id="Icon_feather-shopping-cart" data-name="Icon feather-shopping-cart"
+                                               transform="translate(-0.5 -0.5)">
+                                                <path id="Path_892" data-name="Path 892"
+                                                      d="M14.158,31.079A1.079,1.079,0,1,1,13.079,30,1.079,1.079,0,0,1,14.158,31.079Z"
+                                                      transform="translate(-2.948 -8.001)" fill="none" stroke="#000"
+                                                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                <path id="Path_893" data-name="Path 893"
+                                                      d="M30.658,31.079A1.079,1.079,0,1,1,29.579,30,1.079,1.079,0,0,1,30.658,31.079Z"
+                                                      transform="translate(-7.58 -8.001)" fill="none" stroke="#000"
+                                                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                <path id="Path_894" data-name="Path 894"
+                                                      d="M1.5,1.5H5.816L8.707,15.946a2.158,2.158,0,0,0,2.158,1.737H21.352a2.158,2.158,0,0,0,2.158-1.737l1.726-9.052H6.894"
+                                                      fill="none" stroke="#000" stroke-linecap="round"
+                                                      stroke-linejoin="round" stroke-width="2"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                        <h5 class="drop-title text-center">
+                                            My Card
+                                        </h5>
+                                        <ul class="cart-drop-list list-unstyled">
+                                            <li>
+                                                <div class="row flex-nowrap gx-2 align-items-center justify-content-between">
+                                                    <div class="col-5">
+                                                        <div class="row gx-2 flex-nowrap align-items-center">
+                                                            <div class="col-auto">
+                                                                <a href="#" class="d-block">
+                                                                    <img src="images/dresses/1.png" alt="cart-image"
+                                                                         class="drop-cart-image">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="p-text">
+                                                                    Girls beautiful dress
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="input-group flex-nowrap inc-dec-container drop-cart-inc-dec">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn minus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="2.25"
+                                                                         viewBox="0 0 18.07 2.25">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H10.09a1.125,1.125,0,0,0,0,2.25H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -16.875)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" disabled=""
+                                                                   class="form-control text-center number-cunt"
+                                                                   value="1" data-max="50" data-min="1" placeholder=""
+                                                                   aria-label="" aria-describedby="basic-addon1">
+                                                            <div class="input-group-append">
+                                                                <button class="btn plus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="18.07"
+                                                                         viewBox="0 0 18.07 18.07">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -8.965)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p class="drop-cart-price">
+                                                            10 <span>SAR</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="del-drop-cart del-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="33.444"
+                                                                 height="33.444" viewBox="0 0 33.444 33.444">
+                                                                <path id="Icon_ionic-ios-add"
+                                                                      data-name="Icon ionic-ios-add"
+                                                                      d="M31.141,19.317h-8.88v-8.88a1.472,1.472,0,1,0-2.945,0v8.88h-8.88a1.472,1.472,0,0,0,0,2.945h8.88v8.88a1.472,1.472,0,1,0,2.945,0v-8.88h8.88a1.472,1.472,0,1,0,0-2.945Z"
+                                                                      transform="translate(-12.678 16.722) rotate(-45)"
+                                                                      fill="#748e9c"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row flex-nowrap gx-2 align-items-center justify-content-between">
+                                                    <div class="col-5">
+                                                        <div class="row gx-2 flex-nowrap align-items-center">
+                                                            <div class="col-auto">
+                                                                <a href="#" class="d-block">
+                                                                    <img src="images/dresses/1.png" alt="cart-image"
+                                                                         class="drop-cart-image">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="p-text">
+                                                                    Girls beautiful dress
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="input-group flex-nowrap inc-dec-container drop-cart-inc-dec">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn minus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="2.25"
+                                                                         viewBox="0 0 18.07 2.25">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H10.09a1.125,1.125,0,0,0,0,2.25H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -16.875)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" disabled=""
+                                                                   class="form-control text-center number-cunt"
+                                                                   value="1" data-max="50" data-min="1" placeholder=""
+                                                                   aria-label="" aria-describedby="basic-addon1">
+                                                            <div class="input-group-append">
+                                                                <button class="btn plus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="18.07"
+                                                                         viewBox="0 0 18.07 18.07">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -8.965)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p class="drop-cart-price">
+                                                            10 <span>SAR</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="del-drop-cart del-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="33.444"
+                                                                 height="33.444" viewBox="0 0 33.444 33.444">
+                                                                <path id="Icon_ionic-ios-add"
+                                                                      data-name="Icon ionic-ios-add"
+                                                                      d="M31.141,19.317h-8.88v-8.88a1.472,1.472,0,1,0-2.945,0v8.88h-8.88a1.472,1.472,0,0,0,0,2.945h8.88v8.88a1.472,1.472,0,1,0,2.945,0v-8.88h8.88a1.472,1.472,0,1,0,0-2.945Z"
+                                                                      transform="translate(-12.678 16.722) rotate(-45)"
+                                                                      fill="#748e9c"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row flex-nowrap gx-2 align-items-center justify-content-between">
+                                                    <div class="col-5">
+                                                        <div class="row gx-2 flex-nowrap align-items-center">
+                                                            <div class="col-auto">
+                                                                <a href="#" class="d-block">
+                                                                    <img src="images/dresses/1.png" alt="cart-image"
+                                                                         class="drop-cart-image">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="p-text">
+                                                                    Girls beautiful dress
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="input-group flex-nowrap inc-dec-container drop-cart-inc-dec">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn minus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="2.25"
+                                                                         viewBox="0 0 18.07 2.25">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H10.09a1.125,1.125,0,0,0,0,2.25H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -16.875)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" disabled=""
+                                                                   class="form-control text-center number-cunt"
+                                                                   value="1" data-max="50" data-min="1" placeholder=""
+                                                                   aria-label="" aria-describedby="basic-addon1">
+                                                            <div class="input-group-append">
+                                                                <button class="btn plus-btn" type="button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                         width="18.07" height="18.07"
+                                                                         viewBox="0 0 18.07 18.07">
+                                                                        <path id="Icon_ionic-ios-add"
+                                                                              data-name="Icon ionic-ios-add"
+                                                                              d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z"
+                                                                              transform="translate(-8.965 -8.965)"
+                                                                              fill="#748e9c"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p class="drop-cart-price">
+                                                            10 <span>SAR</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="del-drop-cart del-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="33.444"
+                                                                 height="33.444" viewBox="0 0 33.444 33.444">
+                                                                <path id="Icon_ionic-ios-add"
+                                                                      data-name="Icon ionic-ios-add"
+                                                                      d="M31.141,19.317h-8.88v-8.88a1.472,1.472,0,1,0-2.945,0v8.88h-8.88a1.472,1.472,0,0,0,0,2.945h8.88v8.88a1.472,1.472,0,1,0,2.945,0v-8.88h8.88a1.472,1.472,0,1,0,0-2.945Z"
+                                                                      transform="translate(-12.678 16.722) rotate(-45)"
+                                                                      fill="#748e9c"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="text-center">
+                                            <a href="#" class="main-btn rounded-pill mt-3">Open</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown profile-top-bar-drop">
+                                    <a class="dropdown-toggle" href="#" data-bs-auto-close="outside" role="button"
+                                       id="profileDrop"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img class="profile-top-bar-drop-img" src="images/profile.png" alt="">
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDrop">
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.558 12.655">
+                                                  <g id="user" transform="translate(0 0)">
+                                                    <path id="Path_1314" data-name="Path 1314"
+                                                          d="M90.08,6.1A2.949,2.949,0,0,0,92.235,5.2a2.949,2.949,0,0,0,.893-2.155A2.95,2.95,0,0,0,92.235.893a3.047,3.047,0,0,0-4.31,0,2.949,2.949,0,0,0-.893,2.155A2.949,2.949,0,0,0,87.925,5.2,2.95,2.95,0,0,0,90.08,6.1Zm0,0"
+                                                          transform="translate(-84.881 0)" fill="#dde5ec"/>
+                                                    <path id="Path_1315" data-name="Path 1315"
+                                                          d="M10.532,250.934a7.529,7.529,0,0,0-.1-.8,6.3,6.3,0,0,0-.2-.8,3.971,3.971,0,0,0-.33-.75,2.829,2.829,0,0,0-.5-.649,2.2,2.2,0,0,0-.716-.45,2.474,2.474,0,0,0-.914-.165.928.928,0,0,0-.5.21c-.148.1-.322.209-.516.333a2.957,2.957,0,0,1-.668.294,2.592,2.592,0,0,1-1.633,0,2.948,2.948,0,0,1-.667-.294c-.192-.123-.366-.235-.517-.333a.926.926,0,0,0-.5-.21,2.471,2.471,0,0,0-.914.166,2.2,2.2,0,0,0-.716.45,2.829,2.829,0,0,0-.5.649,3.979,3.979,0,0,0-.33.75,6.314,6.314,0,0,0-.2.8,7.5,7.5,0,0,0-.1.8c-.017.242-.025.493-.025.747a2.1,2.1,0,0,0,.624,1.59,2.247,2.247,0,0,0,1.608.587H8.325a2.246,2.246,0,0,0,1.608-.587,2.1,2.1,0,0,0,.624-1.59c0-.255-.009-.507-.026-.747Zm0,0"
+                                                          transform="translate(0 -241.203)" fill="#dde5ec"/>
+                                                  </g>
+                                                </svg>
+                                            </span>
+                                            My Profile
+                                        </span>
+
+                                            <span class="drop-profile-number">
+                                            8/15
+                                        </span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.25 14.077">
+                                                  <path id="Icon_ionic-md-business" data-name="Icon ionic-md-business"
+                                                        d="M11.183,7.627V4.5H3.375V18.577h15.25V7.627ZM6.5,17.011H4.937V15.446H6.5Zm0-3.127H4.937V12.319H6.5Zm0-3.127H4.937V9.192H6.5Zm0-3.131H4.937V6.062H6.5Zm3.123,9.384H8.06V15.446H9.622Zm0-3.127H8.06V12.319H9.622Zm0-3.127H8.06V9.192H9.622Zm0-3.131H8.06V6.062H9.622Zm7.442,9.384h-5.88V15.446h1.562V13.884H11.183V12.319h1.562V10.754H11.183V9.192h5.88Zm-1.378-6.254H14.123v1.565h1.562Zm0,3.127H14.123V15.45h1.562Z"
+                                                        transform="translate(-3.375 -4.5)" fill="#dde5ec"/>
+                                                </svg>
+                                            </span>
+                                            Business Profile
+                                        </span>
+
+                                            <span class="drop-profile-number">
+                                            20/60
+                                        </span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.596 12.596">
+                                                  <path id="Icon_awesome-box" data-name="Icon awesome-box"
+                                                        d="M12.535,4.542,11.29.807A1.178,1.178,0,0,0,10.17,0H6.692V4.724h5.872A1.124,1.124,0,0,0,12.535,4.542ZM5.9,0H2.426A1.178,1.178,0,0,0,1.306.807L.062,4.542a1.124,1.124,0,0,0-.03.182H5.9ZM0,5.511v5.9A1.181,1.181,0,0,0,1.181,12.6H11.415A1.181,1.181,0,0,0,12.6,11.415v-5.9Z"
+                                                        fill="#dde5ec"/>
+                                                </svg>
+                                            </span>
+                                            Orders
+                                        </span>
+
+                                            <span class="drop-profile-number">
+                                            7
+                                        </span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.655 12.655">
+                                                  <g id="Icon_ionic-ios-chatbubbles"
+                                                     data-name="Icon ionic-ios-chatbubbles"
+                                                     transform="translate(-3.375 -3.375)">
+                                                    <path id="Path_1364" data-name="Path 1364"
+                                                          d="M17.751,11.667a.737.737,0,0,1,.1-.371,1.024,1.024,0,0,1,.064-.094,4.929,4.929,0,0,0,.84-2.747,5.175,5.175,0,0,0-5.284-5.08A5.248,5.248,0,0,0,8.29,7.418a4.888,4.888,0,0,0-.113,1.04,5.16,5.16,0,0,0,5.2,5.144,6.265,6.265,0,0,0,1.436-.234c.344-.094.684-.219.773-.252a.8.8,0,0,1,.283-.052.791.791,0,0,1,.307.061l1.725.611a.411.411,0,0,0,.119.03.242.242,0,0,0,.243-.243.391.391,0,0,0-.015-.082Z"
+                                                          transform="translate(-2.725)" fill="#dde5ec"/>
+                                                    <path id="Path_1365" data-name="Path 1365"
+                                                          d="M11.6,19.26c-.11.03-.249.064-.4.1a5.615,5.615,0,0,1-1.034.137,5.16,5.16,0,0,1-5.2-5.144,5.751,5.751,0,0,1,.046-.651c.018-.131.04-.262.07-.389s.067-.274.106-.408l-.243.216a4.527,4.527,0,0,0-1.57,3.4,4.477,4.477,0,0,0,.754,2.494c.07.106.11.189.1.243s-.362,1.886-.362,1.886a.244.244,0,0,0,.082.234.248.248,0,0,0,.155.055.218.218,0,0,0,.088-.018L5.9,20.745a.475.475,0,0,1,.365.006,5.12,5.12,0,0,0,1.846.365,4.778,4.778,0,0,0,3.653-1.676s.1-.134.21-.292C11.859,19.187,11.731,19.227,11.6,19.26Z"
+                                                          transform="translate(0 -5.405)" fill="#dde5ec"/>
+                                                  </g>
+                                                </svg>
+                                            </span>
+                                            Inbox
+                                        </span>
+
+                                            <span class="drop-profile-number">
+                                            5
+                                        </span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.147 13.067">
+                                                  <path id="Icon_material-place" data-name="Icon material-place"
+                                                        d="M12.073,3A4.57,4.57,0,0,0,7.5,7.573c0,3.43,4.573,8.493,4.573,8.493S16.647,11,16.647,7.573A4.57,4.57,0,0,0,12.073,3Zm0,6.207a1.633,1.633,0,1,1,1.633-1.633A1.634,1.634,0,0,1,12.073,9.207Z"
+                                                        transform="translate(-7.5 -3)" fill="#dde5ec"/>
+                                                </svg>
+                                            </span>
+                                            Address
+                                        </span>
+
+                                            <span class="drop-profile-number">
+                                            3
+                                        </span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.438 12.438">
+                                                  <path id="Icon_awesome-arrow-alt-circle-up"
+                                                        data-name="Icon awesome-arrow-alt-circle-up"
+                                                        d="M.563,6.781A6.219,6.219,0,1,1,6.781,13,6.218,6.218,0,0,1,.563,6.781ZM7.885,9.69V6.781H9.662a.3.3,0,0,0,.213-.514L6.994,3.4a.3.3,0,0,0-.424,0L3.687,6.267a.3.3,0,0,0,.213.514H5.678V9.69a.3.3,0,0,0,.3.3h1.6A.3.3,0,0,0,7.885,9.69Z"
+                                                        transform="translate(-0.563 -0.563)" fill="#dde5ec"/>
+                                                </svg>
+                                            </span>
+                                            Upgrade Packages
+                                        </span>
+
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                        <span class="text-profile-icon-span">
+                                            <span class="drop-profile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.131 12.365">
+                                                  <path id="Icon_open-account-logout"
+                                                        data-name="Icon open-account-logout"
+                                                        d="M5.3,0V1.766h7.065V10.6H5.3v1.766h8.832V0ZM3.533,3.533,0,6.182l3.533,2.65V7.065H10.6V5.3H3.533Z"
+                                                        fill="#dde5ec"/>
+                                                </svg>
+                                            </span>
+                                            Logout
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto d-xl-none order-3">
+                            <div class="hamburger hamburger--spin unactive">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="main-menu">
+                        <li class="active">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stores.html">
+                                Stores
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                Map
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                Trade Exchange
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        <div class="first-home-section ">
+            <div class="container-content">
+                <div class="row gx-3">
+                    <div class="col-xxl-2 col-xl-3 ">
+                        <div class="side-left-menu d-none d-xl-block">
+                            <ul class="side-left-menu-list list-unstyled">
+                                <li class="">
+                                    <a href="index.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.324 13.409">
+                                          <path id="Icon_open-home" data-name="Icon open-home"
+                                                d="M7.662,0,0,5.747H1.916v7.662H5.747V9.578H9.578v3.831h3.831V5.689l1.916.057Z"
+                                                fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            Home
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="stores.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.608 12.143">
+                                          <path id="Icon_awesome-store" data-name="Icon awesome-store"
+                                                d="M14.281,2.813,12.741.356A.759.759,0,0,0,12.1,0H2.517a.759.759,0,0,0-.643.356L.335,2.813A2.116,2.116,0,0,0,1.729,6.048a2.465,2.465,0,0,0,.325.021A2.342,2.342,0,0,0,3.8,5.284a2.344,2.344,0,0,0,3.5,0,2.344,2.344,0,0,0,3.5,0,2.35,2.35,0,0,0,1.75.785,2.438,2.438,0,0,0,.325-.021A2.114,2.114,0,0,0,14.281,2.813Zm-1.72,4.018a3.009,3.009,0,0,1-.7-.09V9.107H2.754V6.74a3.142,3.142,0,0,1-.7.09A3.2,3.2,0,0,1,1.627,6.8a2.983,2.983,0,0,1-.389-.085v4.668A.758.758,0,0,0,2,12.143H12.623a.758.758,0,0,0,.759-.759V6.717a2.422,2.422,0,0,1-.389.085A3.3,3.3,0,0,1,12.561,6.831Z"
+                                                transform="translate(-0.004)" fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            Stores
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.783 14.609">
+                                          <path id="Icon_awesome-shopping-bag" data-name="Icon awesome-shopping-bag"
+                                                d="M10.044,4.565V3.652a3.652,3.652,0,0,0-7.3,0v.913H0v7.761a2.283,2.283,0,0,0,2.283,2.283H10.5a2.283,2.283,0,0,0,2.283-2.283V4.565ZM4.565,3.652a1.826,1.826,0,0,1,3.652,0v.913H4.565ZM9.131,7.076a.685.685,0,1,1,.685-.685A.685.685,0,0,1,9.131,7.076Zm-5.478,0a.685.685,0,1,1,.685-.685A.685.685,0,0,1,3.652,7.076Z"
+                                                fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            Products
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.608 12.782">
+                                          <path id="Icon_awesome-server" data-name="Icon awesome-server"
+                                                d="M13.7,5.9H.913A.913.913,0,0,1,0,4.989V3.163A.913.913,0,0,1,.913,2.25H13.7a.913.913,0,0,1,.913.913V4.989A.913.913,0,0,1,13.7,5.9Zm-1.37-2.511a.685.685,0,1,0,.685.685A.685.685,0,0,0,12.326,3.391Zm-1.826,0a.685.685,0,1,0,.685.685A.685.685,0,0,0,10.5,3.391Zm3.2,7.076H.913A.913.913,0,0,1,0,9.554V7.728a.913.913,0,0,1,.913-.913H13.7a.913.913,0,0,1,.913.913V9.554A.913.913,0,0,1,13.7,10.467Zm-1.37-2.511a.685.685,0,1,0,.685.685A.685.685,0,0,0,12.326,7.956Zm-1.826,0a.685.685,0,1,0,.685.685A.685.685,0,0,0,10.5,7.956Zm3.2,7.076H.913A.913.913,0,0,1,0,14.119V12.293a.913.913,0,0,1,.913-.913H13.7a.913.913,0,0,1,.913.913v1.826A.913.913,0,0,1,13.7,15.032Zm-1.37-2.511a.685.685,0,1,0,.685.685A.685.685,0,0,0,12.326,12.521Zm-1.826,0a.685.685,0,1,0,.685.685A.685.685,0,0,0,10.5,12.521Z"
+                                                transform="translate(0 -2.25)" fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            services
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="map.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.587 12.782">
+                                          <path id="Icon_awesome-map-marker-alt" data-name="Icon awesome-map-marker-alt"
+                                                d="M4.3,12.524C.673,7.266,0,6.726,0,4.793a4.793,4.793,0,0,1,9.587,0c0,1.933-.673,2.472-4.3,7.731a.6.6,0,0,1-.985,0Zm.493-5.734a2,2,0,1,0-2-2A2,2,0,0,0,4.793,6.791Z"
+                                                fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            Map
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="active-link">
+                                    <a href="requests.html" class="d-flex align-items-center ">
+                                    <span class="side-menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.096 11.014">
+                                          <path id="Icon_awesome-exchange-alt" data-name="Icon awesome-exchange-alt"
+                                                d="M0,7.02V6.58a.661.661,0,0,1,.661-.661h9.911V4.6A.661.661,0,0,1,11.7,4.13l2.2,2.2a.661.661,0,0,1,0,.934l-2.2,2.2A.661.661,0,0,1,10.572,9V7.681H.661A.661.661,0,0,1,0,7.02ZM13.435,11.2H3.524V9.883A.661.661,0,0,0,2.4,9.416l-2.2,2.2a.661.661,0,0,0,0,.934l2.2,2.2a.661.661,0,0,0,1.128-.467V12.967h9.911a.661.661,0,0,0,.661-.661v-.441A.661.661,0,0,0,13.435,11.2Z"
+                                                transform="translate(0 -3.936)" fill="#0086bc"/>
+                                        </svg>
+                                    </span>
+                                        <p class="font-size-m">
+                                            Trade Exchange
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="add-container d-xl-block d-none mt-3">
+                            <div class="section-title mb-3">
+                                <h3>
+                                    Advertisement
+                                </h3>
+                            </div>
+
+                            <a href="#" class="d-block">
+                                <img src="images/a1.png" alt="a1">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xxl-10 col-xl-9">
+                        <button title="مكاني على الخريطة" id="myLocation" onclick="geolocate();"><i class="fal fa-location"></i></button>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-4">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-xxl-2-5">
+                    <div class="row g-lg-3 g-3 align-items-center flex-nowrap">
+                        <div class="col">
+                            <a href="index.html" class="d-block">
+                                <img src="images/logo.svg" class="footer-logo img-fluid" alt="footer logo">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <img src="images/vision.png" class="vision-img img-fluid" alt="vision">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <ul class="list-inline footer-link-list text-center mt-lg-0 mt-3">
+                        <li class="list-inline-item">
+                            <a href="about.html">
+                                About Souq Alkhalej
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="conditions.html">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="subscription.html">
+                                Subscription packages
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="../rtl/index.html">
+                                عربي
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-auto">
+                    <ul class="list-inline footer-social-list mt-lg-0 mt-3">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.506" height="19.091"
+                                     viewBox="0 0 23.506 19.091">
+                                    <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter"
+                                          d="M21.09,8.139c.015.209.015.418.015.626A13.613,13.613,0,0,1,7.4,22.472,13.614,13.614,0,0,1,0,20.309a9.966,9.966,0,0,0,1.163.06,9.648,9.648,0,0,0,5.981-2.058,4.826,4.826,0,0,1-4.5-3.341,6.075,6.075,0,0,0,.91.075,5.1,5.1,0,0,0,1.268-.164A4.818,4.818,0,0,1,.955,10.152v-.06a4.852,4.852,0,0,0,2.178.611A4.825,4.825,0,0,1,1.641,4.261,13.694,13.694,0,0,0,11.574,9.3a5.438,5.438,0,0,1-.119-1.1,4.822,4.822,0,0,1,8.338-3.3A9.485,9.485,0,0,0,22.85,3.739a4.8,4.8,0,0,1-2.118,2.655,9.658,9.658,0,0,0,2.774-.746A10.356,10.356,0,0,1,21.09,8.139Z"
+                                          transform="translate(0 -3.381)"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.589" height="22.588"
+                                     viewBox="0 0 22.589 22.588">
+                                    <g id="Icon_feather-instagram" data-name="Icon feather-instagram"
+                                       transform="translate(1.5 1.5)">
+                                        <path id="Path_1289" data-name="Path 1289"
+                                              d="M7.9,3h9.794a4.9,4.9,0,0,1,4.9,4.9v9.794a4.9,4.9,0,0,1-4.9,4.9H7.9a4.9,4.9,0,0,1-4.9-4.9V7.9A4.9,4.9,0,0,1,7.9,3Z"
+                                              transform="translate(-3 -3)" fill="none" stroke="#000"
+                                              stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                        <path id="Path_1290" data-name="Path 1290"
+                                              d="M19.858,15.278a3.918,3.918,0,1,1-3.3-3.3,3.918,3.918,0,0,1,3.3,3.3Z"
+                                              transform="translate(-6.146 -6.101)" fill="none" stroke="#000"
+                                              stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                        <path id="Path_1291" data-name="Path 1291" d="M26.25,9.75h0"
+                                              transform="translate(-11.069 -5.343)" fill="none" stroke="#000"
+                                              stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.589" height="23.506"
+                                     viewBox="0 0 12.589 23.506">
+                                    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f"
+                                          d="M13.374,13.222l.653-4.254H9.945V6.208a2.127,2.127,0,0,1,2.4-2.3H14.2V.287A22.63,22.63,0,0,0,10.9,0C7.543,0,5.346,2.038,5.346,5.726V8.968H1.609v4.254H5.346V23.506h4.6V13.222Z"
+                                          transform="translate(-1.609)"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.506" height="22.099"
+                                     viewBox="0 0 23.506 22.099">
+                                    <path id="Icon_awesome-snapchat-ghost" data-name="Icon awesome-snapchat-ghost"
+                                          d="M23.453,18.4c-.239.558-1.251.968-3.093,1.254a8.611,8.611,0,0,0-.3,1.1.532.532,0,0,1-.557.407h-.014c-.431,0-.882-.2-1.784-.2a3.633,3.633,0,0,0-2.583.945,5.171,5.171,0,0,1-3.4,1.258,5.273,5.273,0,0,1-3.346-1.258A3.629,3.629,0,0,0,5.8,20.964a17.341,17.341,0,0,0-1.784.217.545.545,0,0,1-.57-.415,8.5,8.5,0,0,0-.3-1.108C2.2,19.511.055,19.137,0,18.182a.488.488,0,0,1,.408-.508C3.6,17.148,5.042,13.868,5.1,13.729l.011-.024a1.044,1.044,0,0,0,.113-.861c-.232-.546-1.234-.742-1.655-.909-1.089-.43-1.24-.924-1.176-1.263a1.182,1.182,0,0,1,1.515-.709,2.627,2.627,0,0,0,1.081.289.937.937,0,0,0,.457-.1c-.094-1.65-.326-4.008.261-5.324a6.255,6.255,0,0,1,5.807-3.746l.464,0A6.212,6.212,0,0,1,17.8,4.826c.587,1.315.356,3.663.261,5.326a.9.9,0,0,0,.395.1,2.743,2.743,0,0,0,1.013-.287,1.243,1.243,0,0,1,.94,0h0a.954.954,0,0,1,.716.82c.008.447-.391.834-1.188,1.149-.1.038-.216.076-.341.116-.45.143-1.129.358-1.314.793a1.043,1.043,0,0,0,.113.861l.011.024c.06.139,1.5,3.418,4.693,3.945A.5.5,0,0,1,23.453,18.4Z"
+                                          transform="translate(0 -1.078)"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20.568" height="20.568"
+                                     viewBox="0 0 20.568 20.568">
+                                    <path id="Icon_ionic-logo-whatsapp" data-name="Icon ionic-logo-whatsapp"
+                                          d="M12.72,2.25a10.058,10.058,0,0,0-10.1,10.019,9.916,9.916,0,0,0,1.449,5.174L2.25,22.818l5.59-1.776a10.114,10.114,0,0,0,14.978-8.773A10.058,10.058,0,0,0,12.72,2.25Zm5.021,13.824a2.608,2.608,0,0,1-1.786,1.151c-.474.025-.487.367-3.069-.754A10.535,10.535,0,0,1,8.63,12.446a4.952,4.952,0,0,1-.953-2.684,2.861,2.861,0,0,1,.983-2.1.989.989,0,0,1,.7-.294c.2,0,.335-.006.485,0s.376-.031.572.488.663,1.8.723,1.928a.468.468,0,0,1,0,.449,1.753,1.753,0,0,1-.274.417c-.135.145-.283.323-.4.434s-.274.256-.133.517A7.727,7.727,0,0,0,11.7,13.425a7.045,7.045,0,0,0,2.025,1.346c.253.138.4.123.561-.043s.672-.723.854-.972.352-.2.585-.107,1.476.76,1.73.9.422.208.483.317A2.12,2.12,0,0,1,17.741,16.074Z"
+                                          transform="translate(-2.25 -2.25)"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20.568" height="20.567"
+                                     viewBox="0 0 20.568 20.567">
+                                    <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in"
+                                          d="M4.6,20.568H.34V6.836H4.6ZM2.47,4.963A2.481,2.481,0,1,1,4.939,2.47,2.49,2.49,0,0,1,2.47,4.963Zm18.094,15.6H16.308V13.884c0-1.593-.032-3.636-2.217-3.636-2.217,0-2.557,1.731-2.557,3.521v6.8H7.275V6.836h4.09V8.709h.06a4.481,4.481,0,0,1,4.035-2.217c4.316,0,5.109,2.842,5.109,6.533v7.543Z"
+                                          transform="translate(0 -0.001)"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20.142" height="20.143"
+                                     viewBox="0 0 20.142 20.143">
+                                    <path id="Icon_metro-youtube" data-name="Icon metro-youtube"
+                                          d="M8.338,1.928l-1.361,2.7-1.361-2.7H3.88L6.333,6.2l.014-.008V9.481H7.606V6.194l.014.008,2.453-4.275Zm3.675,2.518a.638.638,0,0,1,.629.629V7.593a.629.629,0,1,1-1.259,0V5.075A.638.638,0,0,1,12.012,4.446Zm0-1.259a1.894,1.894,0,0,0-1.888,1.888V7.593a1.888,1.888,0,1,0,3.777,0V5.075a1.894,1.894,0,0,0-1.888-1.888Zm5.665,0V8.143c-.549.458-1.259.734-1.259-.9V3.187H15.16V7.5h0c.019,1.041.239,2.915,2.516,1.391v.589h1.259V3.187H17.678Zm1.888,12.589a.63.63,0,0,0-.629.629v.629H20.2v-.629A.63.63,0,0,0,19.566,15.776Zm-5.665.629v3.3c.426.426,1.259.472,1.259-.157V16.6C15.16,15.973,14.53,15.776,13.9,16.405Zm8.709-3.038a2.618,2.618,0,0,0-2.574-2.524c-1.373-.068-4.513-.1-7.272-.1s-6.123.034-7.5.1a2.618,2.618,0,0,0-2.574,2.524c-.082,1.478-.124,2.013-.124,2.752s.041,1.847.124,3.325a2.618,2.618,0,0,0,2.574,2.524c1.373.068,4.737.1,7.5.1s5.9-.034,7.272-.1a2.618,2.618,0,0,0,2.574-2.524q.1-1.847.1-3.325c0-.985-.034-1.521-.1-2.752ZM6.347,20.812H5.089V14.517H3.83V13.258H7.606v1.259H6.347Zm5.036,0H10.124v-.589c-2.393,1.343-2.5.043-2.516-1h0V15.776H8.865v3.469c0,.761.71.687,1.259.229v-3.7h1.259Zm5.036-1.277c0,1.316-1.347,1.7-2.518.676v.6H12.642V13.258H13.9V15.3c1.259-1.259,2.518-.787,2.518.472Zm5.036-2.5v.629H18.936v1.259a.629.629,0,1,0,1.259,0v-.629h1.259v.629a1.888,1.888,0,1,1-3.777,0V16.405a1.888,1.888,0,1,1,3.777,0v.629Z"
+                                          transform="translate(-2.571 -1.928)"/>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-right text-center">
+                <p>© 2021 Souq Alkhalej</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="mapFilterModal" tabindex="-1" aria-labelledby="mapFilterModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="drop-title text-center w-100">
+                    Filter
+                </h5>
+                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row map-filter-list g-3">
+                    <div class="col">
+                        <a href="javascript:void(0)" class="map-filter-link" data-bs-dismiss="modal"
+                           aria-label="Close" onclick="filterMarkers(0);">
+                            <img src="images/marker/all.png" alt="">
+                            <span>All</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="javascript:void(0)" class="map-filter-link" data-bs-dismiss="modal"
+                           aria-label="Close" id="clothes" onclick="hideAllMarkers(); filterMarkers(this.id);">
+                            <img src="images/marker/clothes.png" alt="">
+                            <span>Clothes</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="javascript:void(0)" class="map-filter-link" data-bs-dismiss="modal"
+                           aria-label="Close" id="market" onclick="hideAllMarkers(); filterMarkers(this.id);">
+                            <img src="images/marker/market.png" alt="">
+                            <span>Market</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="javascript:void(0)" class="map-filter-link" data-bs-dismiss="modal"
+                           aria-label="Close" id="resturant" onclick="hideAllMarkers(); filterMarkers(this.id);">
+                            <img src="images/marker/resturant.png" alt="">
+                            <span>Restaurant</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="javascript:void(0)" class="map-filter-link" data-bs-dismiss="modal"
+                           aria-label="Close" id="vegetable" onclick="hideAllMarkers(); filterMarkers(this.id);">
+                            <img src="images/marker/vegetable.png" alt="">
+                            <span>Vegetable</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/parsley.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_DZxTXtoNngV50B0Ux6-iPIk9suffd8U&libraries=places&callback=initAutocomplete"
+></script>
+<script src="js/infobox.js"></script>
+<script src="js/main.min.js"></script>
+<script>
+    let searchFilter = function() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("map_search");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("searchURL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    $('.del-drop-cart').on("click", function () {
+        let order_card = $(this).closest("li");
+        Swal.fire({
+            text: "Are you sure you want to delete the item?",
+            // icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#F10404',
+            cancelButtonColor: '#adb5bd',
+            confirmButtonText: 'Delete',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+
+            if (result.value) {
+                order_card.fadeOut(500, function () {
+                    this.remove();
+                    //write BackEnd code here
+                });
+                Swal.fire(
+                    {
+                        title: 'Deleted',
+                        icon: 'success',
+                        confirmButtonText: 'Close',
+                        confirmButtonColor: '#adb5bd'
+                    }
+                )
+            }
+        })
+    });
+</script>
+</body>
+</html>

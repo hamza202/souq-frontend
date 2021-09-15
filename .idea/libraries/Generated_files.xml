@@ -3,14 +3,18 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/js/fancybox.umd.min.js" />
+        <item url="file://$PROJECT_DIR$/js/infobox.min.js" />
         <item url="file://$PROJECT_DIR$/js/intlTelInput.min.js" />
         <item url="file://$PROJECT_DIR$/js/main.min.js" />
+        <item url="file://$PROJECT_DIR$/js/map.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/js/fancybox.umd.min.js" />
+      <root url="file://$PROJECT_DIR$/js/infobox.min.js" />
       <root url="file://$PROJECT_DIR$/js/intlTelInput.min.js" />
       <root url="file://$PROJECT_DIR$/js/main.min.js" />
+      <root url="file://$PROJECT_DIR$/js/map.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

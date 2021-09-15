@@ -306,6 +306,12 @@ let main = (function () {
     $("#newUserModal").on("shown.bs.modal", function (){
         tit_width()
     })
+    $("#map_search").focus(function() {
+        $("#searchURL").fadeIn(200)
+    });
+    $("#map_search").on("focusout", function (){
+        $("#searchURL").fadeOut(200)
+    })
 
     return {
         init: function () {
@@ -342,7 +348,6 @@ let main = (function () {
             if($('[data-fancybox="gallery"]').length){
                 galleryFancybox();
             }
-
 
         },
     };

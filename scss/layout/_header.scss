@@ -196,7 +196,12 @@
             text-align: center;
             display: inline-block;
             margin-#{$opDir}: 3px;
-
+            img{
+              width: 17px;
+              height: 17px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
             svg {
               max-height: 18px;
               max-width: 17px;
