@@ -255,7 +255,7 @@ function initAutocomplete() {
                 marker.setMap(null);
                 marker = new google.maps.Marker({
                     position: pos,
-                    draggable: true,
+                    draggable: false,
                     animation: google.maps.Animation.DROP,
                     icon: 'images/marker/marker.png',
                     map: mapObject,
