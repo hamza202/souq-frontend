@@ -312,6 +312,25 @@ let main = (function () {
     $("#map_search").on("focusout", function (){
         $("#searchURL").fadeOut(200)
     })
+    //tabs open bay hash
+    function onHashChange() {
+        var hash = window.location.hash;
+
+        if (hash) {
+            // using ES6 template string syntax
+            $('[data-bs-toggle="tab"][data-bs-target="' + hash.toLowerCase() + '"]').trigger('click');
+        }
+    }
+
+    window.addEventListener('hashchange', onHashChange, false);
+    onHashChange();
+
+    if($(".select2").length){
+        $(".select2").select2({
+            theme: "bootstrap-5",
+            // allowClear: true
+        });
+    }
 
     return {
         init: function () {
