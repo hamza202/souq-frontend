@@ -820,18 +820,71 @@
                             </div>
                         </div>
                         <div class="about-comp-card mt-3">
-                            <h3 class="title-1">
-                                About us
-                            </h3>
-                            <div class="row justify-content-center">
-                                <div class="col-xl-8 col-lg-10">
-                                    <p class="text-2 mt-2">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta eveniet
-                                        id, minus modi neque, quae quidem reiciendis rerum similique, tempore
-                                        voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
-                                    </p>
+                            <article class="red-more">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-8 col-lg-10">
+                                        <h3 class="title-1 mt-3">
+                                            About us
+                                        </h3>
+                                        <p class="text-2 mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-8 col-lg-10">
+                                        <h3 class="title-1 mt-3">
+                                            Our goals
+                                        </h3>
+                                        <p class="text-2 mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-8 col-lg-10">
+                                        <h3 class="title-1">
+                                            Our vision
+                                        </h3>
+                                        <p class="text-2 mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta
+                                            eveniet
+                                            id, minus modi neque, quae quidem reiciendis rerum similique, tempore
+                                            voluptates. Autem dolorum itaque laborum non quisquam, soluta velit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                         <section class="comp-product mt-3">
                             <div class="section-title mt-4 mb-3">
@@ -1929,6 +1982,7 @@
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/parsley.min.js"></script>
 <script src="js/fancybox.umd.js"></script>
+<script src="js/readmore.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_DZxTXtoNngV50B0Ux6-iPIk9suffd8U"></script>
 <script src="js/main.min.js"></script>
 <script>
@@ -1984,6 +2038,14 @@
     }
 
     initMap()
+    $('article.red-more').readmore({
+        speed: 75,
+        afterToggle: function (trigger, element, expanded) {
+            if (!expanded) { // The "Close" link was clicked
+                $('html, body').animate({scrollTop: element.offset().top}, {duration: 50});
+            }
+        }
+    });
 </script>
 </body>
 </html>

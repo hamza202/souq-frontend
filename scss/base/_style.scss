@@ -2310,3 +2310,11 @@ input.form-control {
     }
   }
 }
+article.red-more {
+  max-height: 8.1em;
+  overflow: hidden;
+  transition: all ease-in-out .3s;
+}
+a[data-readmore-toggle]{
+  color: $main-blue-color;
+}

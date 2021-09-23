@@ -9,6 +9,7 @@
         <item url="file://$PROJECT_DIR$/js/main.min.js" />
         <item url="file://$PROJECT_DIR$/js/map.min.js" />
         <item url="file://$PROJECT_DIR$/js/mobiscroll.jquery.min.min.js" />
+        <item url="file://$PROJECT_DIR$/js/readmore.min.min.js" />
         <item url="file://$PROJECT_DIR$/js/select2.full.min.min.js" />
       </sourceFilesUrls>
     </properties>
@@ -20,6 +21,7 @@
       <root url="file://$PROJECT_DIR$/js/main.min.js" />
       <root url="file://$PROJECT_DIR$/js/map.min.js" />
       <root url="file://$PROJECT_DIR$/js/mobiscroll.jquery.min.min.js" />
+      <root url="file://$PROJECT_DIR$/js/readmore.min.min.js" />
       <root url="file://$PROJECT_DIR$/js/select2.full.min.min.js" />
     </CLASSES>
     <JAVADOC />
