@@ -342,11 +342,14 @@ input.form-control {
 
 .add-container {
   a {
-    margin-bottom: 1rem;
 
     img {
       @extend %border-radius-lg;
       width: 100%;
+      @include media-breakpoint-up(lg){
+        height: 135px;
+        object-fit: cover;
+      }
     }
   }
 }
