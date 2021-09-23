@@ -294,24 +294,31 @@ let main = (function () {
         });
     }
     let tit_width = function () {
-            let phoneInput = $('.iti--allow-dropdown');
-            let phoneNumberDrop = $(".iti__country-list")
+        let phoneInput = $('.iti--allow-dropdown');
+        let phoneNumberDrop = $(".iti__country-list")
+        let phoneInputWidth = phoneInput.width();
+        phoneNumberDrop.css('width', phoneInputWidth + 'px')
+        $(window).on('resize', function () {
             let phoneInputWidth = phoneInput.width();
-            phoneNumberDrop.css('width', phoneInputWidth + 'px')
-            $(window).on('resize', function () {
-                let phoneInputWidth = phoneInput.width();
-                phoneNumberDrop.css('width', phoneInputWidth + 'px');
-            });
+            phoneNumberDrop.css('width', phoneInputWidth + 'px');
+        });
     };
-    $("#newUserModal").on("shown.bs.modal", function (){
+    $("#newUserModal").on("shown.bs.modal", function () {
         tit_width()
     })
-    $("#map_search").focus(function() {
+    $("#map_search").focus(function () {
         $("#searchURL").fadeIn(200)
     });
-    $("#map_search").on("focusout", function (){
+    $("#map_search").on("focusout", function () {
         $("#searchURL").fadeOut(200)
     })
+    if ($("#homeMainSlider").length) {
+        var myCarousel = document.getElementById('homeMainSlider')
+        myCarousel.addEventListener('slide.bs.carousel', function () {
+            $('.c-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        })
+    }
+
     //tabs open bay hash
     function onHashChange() {
         var hash = window.location.hash;
@@ -325,7 +332,7 @@ let main = (function () {
     window.addEventListener('hashchange', onHashChange, false);
     onHashChange();
 
-    if($(".select2").length){
+    if ($(".select2").length) {
         $(".select2").select2({
             theme: "bootstrap-5",
             // allowClear: true
@@ -364,7 +371,7 @@ let main = (function () {
             if ($(".pic1").length) {
                 imgUpload();
             }
-            if($('[data-fancybox="gallery"]').length){
+            if ($('[data-fancybox="gallery"]').length) {
                 galleryFancybox();
             }
 

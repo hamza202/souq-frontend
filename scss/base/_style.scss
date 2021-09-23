@@ -190,7 +190,7 @@ input.form-control {
         border-radius: 100px;
         padding: 8px 10px;
         @include media-breakpoint-down(xxl) {
-          padding: 6px 10px;
+          padding: 11px 10px;
         }
 
         p {
@@ -217,8 +217,8 @@ input.form-control {
           width: 35px;
           height: 35px;
           @include media-breakpoint-down(xxl) {
-            width: 27px;
-            height: 27px;
+            width: 29px;
+            height: 29px;
           }
           transition: all ease-in-out 0.3s;
           background-color: $white-color;
@@ -253,14 +253,28 @@ input.form-control {
   @include media-breakpoint-down(xxl) {
     margin-top: 0;
   }
-
+  .carousel-control-next, .carousel-control-prev{
+    top: 45px;
+    bottom: 45px;
+  }
+  .c-video{
+    height: 435px;
+    margin-bottom: -3px;
+    @extend %border-radius-lg;
+    @include media-breakpoint-down(xxl) {
+      height: 360px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 200px;
+    }
+  }
   img {
     width: 100%;
     object-fit: cover;
     @extend %border-radius-lg;
     height: 435px;
     @include media-breakpoint-down(xxl) {
-      height: 289px;
+      height: 360px;
     }
     @include media-breakpoint-down(sm) {
       height: 200px;
@@ -268,8 +282,8 @@ input.form-control {
   }
 
   .carousel-indicators {
-    #{$opDir}: auto;
-    #{$dir}: 50%;
+    #{$dir}: auto;
+    #{$opDir}: 50%;
     transform: translateX(-50%);
     margin-#{$dir}: 0;
     margin-#{$opDir}: 0;
@@ -911,6 +925,9 @@ input.form-control {
     -webkit-align-items: center;
     align-items: center;
     min-height: 110px;
+    @include media-breakpoint-down(sm){
+      min-height: 80px;
+    }
 
     h3 {
       color: $main-blue-color;
@@ -2272,5 +2289,24 @@ input.form-control {
     z-index: 3;
     position: relative;
     padding: 5px;
+  }
+}
+.mobile-adds{
+  img{
+    @extend %border-radius-lg;
+    width: 100%;
+    max-width: 300px;
+    height: 270px;
+    object-fit: cover;
+    @include media-breakpoint-down(sm){
+      height: 250px;
+    }
+  }
+}
+.tow-adds.mobile-adds{
+  img{
+    @include media-breakpoint-down(sm){
+      height: 163px;
+    }
   }
 }
