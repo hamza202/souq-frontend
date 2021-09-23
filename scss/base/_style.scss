@@ -1584,6 +1584,7 @@ input.form-control {
   background-color: $bg-blue-color;
   padding: 30px;
   text-align: center;
+  padding-top: 10px;
 
   p {
     color: $text-black;
@@ -2311,10 +2312,46 @@ input.form-control {
   }
 }
 article.red-more {
-  max-height: 8.1em;
+  max-height: 8.2em;
   overflow: hidden;
   transition: all ease-in-out .3s;
 }
 a[data-readmore-toggle]{
   color: $main-blue-color;
+}
+.short-link{
+  a{
+    width: 80px;
+    display: inline-block;
+    .short-img{
+      box-shadow: 0px 0px 3px 4px rgba(0,0,0,0.2);
+      position: relative;
+      transition: all ease-in-out 0.3s;
+      width: 55px;
+      height: 55px;
+      background: $main-blue-color;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      img{
+        max-width: 60%;
+        min-height: 60%;
+      }
+    }
+    .short-text{
+      color: $black-color;
+
+      transition: all ease-in-out 0.3s;
+    }
+    &:hover{
+      .short-text{
+        color: $main-blue-color;
+      }
+      .short-img{
+        box-shadow: $box-shadow;
+      }
+    }
+  }
 }
