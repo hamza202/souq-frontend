@@ -8,3 +8,24 @@ body, .font-size-m, .store-filter-btn, .footer .footer-link-list li a, .copy-rig
   content: 'اختر صورة';
   padding: 0 21px;
 }
+.iti__country-list{
+  left: 0;
+}
+.side-left-menu .side-left-menu-list li a:hover p{
+  transform: translateX(-5px);
+}
+.send-comment{
+  button{
+    svg{
+      transform: scale(-1);
+    }
+  }
+}
+.product-store-name:hover p{
+  transform: translateX(-3px);
+}
+.infoBox{
+  &>img{
+    float: left;
+  }
+}

@@ -318,6 +318,13 @@ let main = (function () {
             $('.c-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
         })
     }
+    if ($(".chat-container").length) {
+        $(document).ready(function () {
+            var chatHeight = $(".chat-container").height();
+            $(".chat-container").scrollTop(chatHeight + 50);
+        });
+    }
+
 
     //tabs open bay hash
     function onHashChange() {

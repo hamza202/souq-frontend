@@ -1,6 +1,6 @@
 %my-btn {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
   background-color: $main-blue-color;
   border: 1px solid $main-blue-color;
   color: $white;

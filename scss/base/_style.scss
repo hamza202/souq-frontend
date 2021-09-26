@@ -95,6 +95,7 @@ button:focus {
 }
 
 .main-container {
+  min-height: calc(100vh - 166px);
   width: 100%;
   background-color: $white-color;
   @extend %border-radius-lg;
@@ -253,11 +254,13 @@ input.form-control {
   @include media-breakpoint-down(xxl) {
     margin-top: 0;
   }
-  .carousel-control-next, .carousel-control-prev{
+
+  .carousel-control-next, .carousel-control-prev {
     top: 45px;
     bottom: 45px;
   }
-  .c-video{
+
+  .c-video {
     height: 435px;
     margin-bottom: -3px;
     @extend %border-radius-lg;
@@ -268,6 +271,7 @@ input.form-control {
       height: 200px;
     }
   }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -346,7 +350,7 @@ input.form-control {
     img {
       @extend %border-radius-lg;
       width: 100%;
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         height: 135px;
         object-fit: cover;
       }
@@ -928,7 +932,7 @@ input.form-control {
     -webkit-align-items: center;
     align-items: center;
     min-height: 110px;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       min-height: 80px;
     }
 
@@ -1040,7 +1044,7 @@ input.form-control {
 
 .h-scroll::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .h-scroll::-webkit-scrollbar {
@@ -1586,11 +1590,17 @@ input.form-control {
 .about-comp-card {
   background-color: $bg-blue-color;
   padding: 30px;
-  text-align: center;
   padding-top: 10px;
 
   p {
     color: $text-black;
+    @extend %text-2;
+    b{
+      @extend %title-2;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      display: inline-block;
+    }
   }
 
   @include media-breakpoint-down(sm) {
@@ -1723,6 +1733,9 @@ input.form-control {
         &:last-child {
           text-align: #{$opDir};
           font-weight: 500;
+        }
+        &:not(:first-child){
+          text-align: center;
         }
       }
     }
@@ -2018,7 +2031,7 @@ input.form-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 9px;
+    #{$opDir}: 9px;
     width: 18px;
     height: auto;
     opacity: 0;
@@ -2027,7 +2040,7 @@ input.form-control {
   }
 
   input {
-    padding-right: 30px;
+    padding-#{$opDir}: 30px;
   }
 
   &.coupon-success {
@@ -2220,52 +2233,62 @@ input.form-control {
 .mbsc-ios.mbsc-range-control-value.active, .mbsc-ios.mbsc-scroller-pointer .mbsc-scroller-wheel-item.mbsc-selected, .mbsc-ios.mbsc-button-flat {
   color: $main-blue-color;
 }
-.mbsc-ios.mbsc-textfield-wrapper-box, .mbsc-ios.mbsc-textfield-wrapper-outline{
+
+.mbsc-ios.mbsc-textfield-wrapper-box, .mbsc-ios.mbsc-textfield-wrapper-outline {
   margin: 0;
 }
-.tap-style2{
-  .main-btn{
+
+.tap-style2 {
+  .main-btn {
     background-color: #F8FBFF;
     color: #748E9C;
     border-color: #F8FBFF;
-    &.active{
+
+    &.active {
       background-color: $main-blue-color;
       color: $white-color;
       border-color: $main-blue-color;
     }
   }
 }
-#location_map{
+
+#location_map {
   width: 100%;
   height: 137px;
   @extend %border-radius-lg;
 }
-.business-card{
-  small{
+
+.business-card {
+  small {
     white-space: nowrap;
   }
 }
-.check-box-style1{
-  input{
+
+.check-box-style1 {
+  input {
     display: none;
   }
-  label{
-    padding:0.5rem 1rem;
+
+  label {
+    padding: 0.5rem 1rem;
     border: 1px solid $border-color;
     border-radius: 8px;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
     color: $black-color;
   }
-  input:checked + label{
+
+  input:checked + label {
     border-color: $main-blue-color;
   }
 }
-.file-box{
+
+.file-box {
   position: relative;
   @extend %border-radius-lg;
-  input[type="file"]{
-    &:after{
+
+  input[type="file"] {
+    &:after {
       content: "Choose image";
       position: absolute;
       z-index: 2;
@@ -2282,52 +2305,62 @@ input.form-control {
     }
   }
 }
-.business-prev-img{
+
+.business-prev-img {
   height: 50px;
   width: 70px;
   border-radius: 8px;
   object-fit: cover;
 }
-.business-main-title{
-  .complete-cunt{
+
+.business-main-title {
+  .complete-cunt {
     z-index: 3;
     position: relative;
     padding: 5px;
   }
 }
-.mobile-adds{
-  img{
+
+.mobile-adds {
+  img {
     @extend %border-radius-lg;
     width: 100%;
     max-width: 300px;
     height: 270px;
     object-fit: cover;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       height: 250px;
     }
   }
 }
-.tow-adds.mobile-adds{
-  img{
-    @include media-breakpoint-down(sm){
+
+.tow-adds.mobile-adds {
+  img {
+    @include media-breakpoint-down(sm) {
       height: 163px;
     }
   }
 }
+
 article.red-more {
-  max-height: 8.2em;
+  max-height: 11em;
   overflow: hidden;
   transition: all ease-in-out .3s;
 }
-a[data-readmore-toggle]{
+
+a[data-readmore-toggle] {
   color: $main-blue-color;
+  display: block;
+  text-align: center;
 }
-.short-link{
-  a{
+
+.short-link {
+  a {
     width: 80px;
     display: inline-block;
-    .short-img{
-      box-shadow: 0px 0px 3px 4px rgba(0,0,0,0.2);
+
+    .short-img {
+      box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.2);
       position: relative;
       transition: all ease-in-out 0.3s;
       width: 55px;
@@ -2338,23 +2371,142 @@ a[data-readmore-toggle]{
       justify-content: center;
       border-radius: 50%;
 
-      img{
+      img {
         max-width: 60%;
         min-height: 60%;
       }
     }
-    .short-text{
+
+    .short-text {
       color: $black-color;
 
       transition: all ease-in-out 0.3s;
     }
-    &:hover{
-      .short-text{
+
+    &:hover {
+      .short-text {
         color: $main-blue-color;
       }
-      .short-img{
+
+      .short-img {
         box-shadow: $box-shadow;
       }
     }
   }
+}
+
+.inbox-container-link {
+
+  a {
+    padding: 7px;
+    @extend %border-radius-lg;
+    color: $black-color;
+
+    p {
+      color: $gray-color;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $border-color;
+      transition: all ease-in-out 0.3s;
+    }
+
+    &.active {
+      background-color: $main-blue-color;
+      color: $white;
+
+      img {
+        border-color: #F8FBFF;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: rotate(8deg);
+      }
+    }
+  }
+}
+
+.inbox-container-link {
+  overflow-y: scroll;
+  max-height: 500px;
+  @include media-breakpoint-up(xxl){
+    max-height: 518px;
+  }
+  @include media-breakpoint-down(lg) {
+    max-height: 150px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 80px;
+  }
+}
+
+.chat-container {
+  .row{
+    //width: 100%;
+  }
+  .chat-img{
+    img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      @include media-breakpoint-down(sm){
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .comp-chat{
+    text-align: $dir;
+    .comp-text{
+      text-align: $dir;
+      display: inline-block;
+      padding: 0.7rem;
+      background-color: #E8EFF6;
+      @extend %border-radius-lg;
+    }
+  }
+  .user-chat{
+    width: 100%;
+    text-align: $opDir;
+    .user-text{
+      text-align: $dir;
+      display: inline-block;
+      padding: 0.7rem;
+      background-color: $white;
+      @extend %border-radius-lg;
+    }
+  }
+}
+.chat-container{
+  max-height: 300px;
+  overflow-y: scroll;
+  @include media-breakpoint-up(xxl){
+    max-height: 322px;
+  }
+}
+.inbox-store-card{
+  min-height: calc(100% - 1.5rem);
+}
+#trial-message{
+  display: none !important;
+}
+.header-flag-icon{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.form-check-input:checked{
+  background-color: $main-blue-color;
+  border-color: $main-blue-color;
 }

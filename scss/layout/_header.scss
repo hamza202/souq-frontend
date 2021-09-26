@@ -617,6 +617,7 @@
   list-style-type: none;
   width: 100%;
   padding-left: 0;
+  padding-right: 0;
   @include media-breakpoint-up(xl){
     display: none;
   }
@@ -679,4 +680,17 @@
     height: 27px;
     width: auto;
   }
+}
+.search-top-bar-drop{
+  button{
+    min-height: 42px;
+  }
+}
+.product-color li label:after{
+  right: auto !important;
+  left: 50%;
+}
+.package-list li{
+  padding-left: 0;
+  padding-right: 25px;
 }
