@@ -2494,6 +2494,7 @@ a[data-readmore-toggle] {
   @include media-breakpoint-up(xxl){
     max-height: 322px;
   }
+
 }
 .inbox-store-card{
   min-height: calc(100% - 1.5rem);
@@ -2509,4 +2510,42 @@ a[data-readmore-toggle] {
 .form-check-input:checked{
   background-color: $main-blue-color;
   border-color: $main-blue-color;
+}
+.rating-stars ul {
+  list-style-type: none;
+  padding: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.rating-stars ul > li.star {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.rating-stars ul > li.star > i.fa {
+  font-size: 2.5em;
+  color: #ccc;
+}
+
+.rating-stars ul > li.star.hover > i.fa {
+  color: #FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color: #FF912C;
+}
+
+#stars {
+  //margin-top: 20px;
+  text-align: center;
+}
+.header-comp-logo{
+  h4{
+    max-width: calc(100% - 70px);
+    @include media-breakpoint-down(xxl){
+      max-width: calc(100% - 55px);
+    }
+  }
 }
