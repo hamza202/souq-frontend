@@ -1,4 +1,7 @@
 .footer {
+  @include media-breakpoint-down(xl){
+    padding-bottom: 50px;
+  }
   .footer-link-list {
     li {
       a {
@@ -67,6 +70,45 @@
     font-family: Poppins, "sans-serif";
     @include media-breakpoint-down(xs){
       font-size: 16px;
+    }
+  }
+}
+.footer-mobile-menu{
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 10px;
+  @include media-breakpoint-up(md){
+    padding: 15px 30px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 5px 10px;
+    svg{
+      height: 20px;
+      width: auto;
+      max-width: 19px;
+    }
+    span{
+      padding-#{$dir}:5px ;
+      display: none;
+      color: #fff;
+    }
+    &.active{
+      span{
+        display: inline-block;
+      }
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
+      background-color: $main-blue-color;
     }
   }
 }
