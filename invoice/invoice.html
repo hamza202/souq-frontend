@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Service invoice</title>
+
+    <style>
+      /* @font-face {
+        font-family: hacen-tunisia !important;
+        src: url({{url("assets/pdf-assets/ArbFONTS-HacenTunisia.ttf")}});
+        font-weight: 500;
+      } */
+      @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+    </style>
+
+    <style>
+      body {
+        margin: 40px 30px 0 30px;
+        font-family: 'Tajawal', sans-serif !important;
+        color: #2a2a2a;
+        position: relative;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      /* .logo img {*/
+      /*    width: 100px;*/
+      /*    height: auto;*/
+      /*}*/
+
+      .text-right {
+        text-align: right;
+      }
+
+      .text-left {
+        text-align: left !important;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /*
+                .barcode img {
+                    width: 130px;
+                    height: auto;
+                } */
+
+      .top-header {
+        vertical-align: top;
+      }
+
+      .big-title td {
+        color: #322f2c;
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      .date-time td {
+        width: 50%;
+        padding: 10px;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 14px;
+      }
+
+      .color1 {
+        color: #707070;
+      }
+
+      .rtl {
+        direction: rtl;
+      }
+
+      .details-table {
+        margin-bottom: 15px;
+      }
+
+      .details td {
+        font-size: 16px;
+        padding-top: 20px;
+        width: 16.66666666666667%;
+      }
+
+      .pr-20px {
+        padding-right: 20px;
+      }
+
+      .pl-15px {
+        padding-left: 15px;
+      }
+
+      .copy-right {
+        border-spacing: 0;
+        margin-top: 100px;
+      }
+
+      .copy-right td {
+        background-color: #eaeaea;
+        border: 1px solid #cbcaca;
+        text-align: center;
+        padding: 10px;
+        font-size: 21px;
+        color: #322f2c;
+      }
+
+      .copy-right td span {
+        color: #000;
+        font-size: 27px;
+        position: relative;
+        top: 3px;
+      }
+
+      .pr-10px {
+        padding-right: 10px;
+      }
+
+      .pl-10px {
+        padding-left: 10px;
+      }
+
+      .th-style th {
+        background-color: #eaeaea;
+        color: #707070;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 5px;
+      }
+
+      .car-information-table {
+        border-spacing: 0;
+      }
+
+      /* .car-information-table th{
+            width: 50%;
+        } */
+      .car-information-table td {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .border-top {
+        border-top: 1px solid #cbcaca;
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #cbcaca;
+      }
+
+      .border-left {
+        border-left: 1px solid #cbcaca;
+      }
+
+      .border-right {
+        border-right: 1px solid #cbcaca;
+      }
+
+      .va-top {
+        vertical-align: top;
+      }
+
+      .mt-10px {
+        margin-top: 16.5px;
+      }
+
+      .car-information-table.td-pd td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .p-10px {
+        padding: 10px;
+      }
+
+      .car-information-table td.big-font {
+        font-size: 20px;
+      }
+
+      .my-bg {
+        background-color: #eaeaea !important;
+      }
+
+      .big-table {
+        text-align: center;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      .th-style-2 th {
+        background-color: #ddd;
+      }
+
+      .th-style-3 td {
+        background-color: #eaeaea;
+        padding: 7px 5px;
+        font-weight: 500;
+        font-size: 15px;
+        border: 1px solid #adadad;
+      }
+
+      .big-table th {
+        padding: 7px 5px;
+        font-weight: 500;
+        font-size: 15px;
+        border: 1px solid #adadad;
+      }
+
+      .big-table td {
+        border: 1px solid #adadad;
+        padding: 7px 5px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .table-title {
+        font-size: 16px;
+        color: #707070;
+      }
+
+      .light-table {
+        padding: 3px 0;
+      }
+
+      .light-table td {
+        padding: 7px 10px !important;
+      }
+      .custom-td-height td {
+        height: 45px;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+      /*.fs-12{*/
+      /*    font-size: 12px !important;*/
+      /*}*/
+      /*.car-information-table td.fs-12{*/
+      /*    font-size: 12px !important;*/
+      /*}*/
+    </style>
+  </head>
+  <body>
+    <table style="vertical-align: middle; padding-top: 15px">
+      <tr class="top-header">
+        <td class="logo" style="width: 33.3333%; vertical-align:middle;">
+          <img
+            src="logo.png"
+            style="width: 200px; height: auto"
+          />
+        </td>
+        <td style="width: 33.3333%">
+          <table>
+            <tr class="big-title">
+              <td style="text-align: center; color: #322f2c">فاتورة ضريبية</td>
+            </tr>
+            <tr class="big-title">
+              <td style="text-align: center; color: #322f2c">Tax invoice</td>
+            </tr>
+            <tr class="date-time">
+            
+              <td style="text-align: center; padding-top: 20px">0001000100</td>
+            </tr>
+          </table>
+        </td>
+        <td class="barcode text-right" style="width: 33.3333%">
+          <img
+            src="qr.png"
+            style="
+              width: 100px;
+              height: auto;
+              border: 2px solid #000;
+              padding: 2px;
+            "
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <hr style="margin-top: 7px; margin-bottom: 7px; color: #c0bebe" />
+        </td>
+      </tr>
+
+      <tr class="va-top" style="vertical-align: top !important">
+        <td colspan="3">
+          <table class="va-top">
+            <tr class="va-top">
+              <td style="width: 49%; padding-right: 1%">
+                <table class="car-information-table custom-td-height">
+                  <thead>
+                    <tr class="th-style">
+                      <th
+                        colspan="3"
+                        class="border-left border-top border-bottom border-right my-bg"
+                      >
+                        <table class="car-information-table">
+                          <tr class="th-style">
+                            <th class="text-left">Order Information :</th>
+                            <th class="rtl text-right">معلومات الطلب :</th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-left color1">Release Date :</td>
+                      <td class="text-center fs-12">01/04/2021</td>
+                      <td class="rtl color1 border-right">تاريخ الإصدار :</td>
+                    </tr>
+                    <tr>
+                      <td class="border-left color1">Type of invoice :</td>
+                      <td class="text-center fs-12">01/04/2021</td>
+                      <td class="rtl color1 border-right">تاريخ الاستحقاق :</td>
+                    </tr>
+                    <tr>
+                      <td class="border-left color1">Type of invoice :</td>
+                      <td class="text-center fs-12">آجل</td>
+                      <td class="rtl color1 border-right">نوع الفاتورة :</td>
+                    </tr>
+                    <tr>
+                      <td class="border-left border-bottom color1">
+                        Service Type :
+                      </td>
+                      <td class="text-center border-bottom fs-12">رحلة</td>
+                      <td class="rtl color1 border-bottom border-right">
+                        نوع الخدمة :
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td style="width: 49%; padding-left: 1%">
+                <table class="car-information-table custom-td-height">
+                  <thead>
+                    <tr class="th-style">
+                      <th
+                        colspan="3"
+                        class="border-left border-top border-bottom border-right my-bg"
+                      >
+                        <table class="car-information-table">
+                          <tr class="th-style">
+                            <th class="text-left">Transportation Document :</th>
+                            <th class="rtl text-right">معلومات النقل :</th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-left color1" width="27%">Name :</td>
+                      <td class="text-center fs-12">
+                        شركة الرائدة الحديثة شركة الرائدة الحديثة
+                      </td>
+                      <td class="rtl color1 border-right" width="27%">
+                        الإسم :
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border-left color1">Customer No :</td>
+                      <td class="text-center fs-12">10000076</td>
+                      <td class="rtl color1 border-right">رقم العميل :</td>
+                    </tr>
+                    <tr>
+                      <td class="border-left color1">VAT No :</td>
+                      <td class="text-center fs-12">123456789123456</td>
+                      <td class="rtl color1 border-right">الرقم الضريبي :</td>
+                    </tr>
+                    <tr>
+                      <td class="border-left border-bottom color1">
+                        Supervisor :
+                      </td>
+                      <td class="text-center border-bottom fs-12">
+                        عبد السلام الأحمد
+                      </td>
+                      <td class="rtl color1 border-right border-bottom">
+                        المسؤول :
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="padding: 0">
+                <table style="margin-top: 10px">
+                  <tr>
+                    <td
+                      class="customer-address border-bottom border-right border-left border-top"
+                    >
+                      <table
+                        class="car-information-table"
+                        style="width: 100%; margin-bottom: 0"
+                      >
+                        <tr>
+                          <td
+                            colspan="1"
+                            style="text-align: left; width: 380px"
+                          >
+                            <span class="color1" style="font-size: 16px"
+                              >Customer Address :</span
+                            >
+                          </td>
+                          <td
+                            colspan="1"
+                            style="text-align: right; width: 380px"
+                            class="rtl"
+                          >
+                            <span class="color1" style="font-size: 16px"
+                              >عنوان العيل :</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="1"
+                            style="
+                              text-align: left;
+                              width: 380px;
+                              font-size: 12px;
+                              padding-right: 1%;
+                              padding-top: 0;
+                            "
+                          >
+                            Riyadh - POB / 430 Postal Code / 22527
+                            <br />
+                            Riyadh - POB / 430 Postal Code / 22527
+                          </td>
+                          <td
+                            colspan="1"
+                            style="
+                              text-align: right;
+                              width: 380px;
+                              font-size: 12px;
+                              padding-left: 1%;
+                              padding-top: 0;
+                            "
+                          >
+                            الرياض - ص ب / 430 الرمز البريدي / 22527
+                            <br />
+                            الرياض - ص ب / 430 الرمز البريدي / 22527
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding: 0">
+          <table style="margin-top: 10px">
+            <tr>
+              <td>
+                <table class="big-table">
+                  <thead>
+                    <tr class="th-style-2">
+                      <th>م</th>
+                      <th>رقم الطلب</th>
+                      <th>تاريخ الطلب</th>
+                      <th>نوع المركبة</th>
+                      <th>من مدينة</th>
+                      <th>إلى مدينة</th>
+                      <th>التكلفة</th>
+                      <th>الضريبة 15٪</th>
+                      <th>الإجمالي</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="th-style-3">
+                      <td>No</td>
+                      <td>Order No</td>
+                      <td>Order Date</td>
+                      <td>Vehicle Type</td>
+                      <td>From City</td>
+                      <td>To City</td>
+                      <td>Price</td>
+                      <td>VAT 15%</td>
+                      <td>Total Price</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>100001</td>
+                      <td>03/03/2021</td>
+                      <td>تريلا ستائر جانبية</td>
+                      <td>خميس مشيط</td>
+                      <td>خميس مشيط</td>
+                      <td>1,200.00</td>
+                      <td>180.00</td>
+                      <td>1380.00</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>100001</td>
+                      <td>03/03/2021</td>
+                      <td>تريلا ستائر جانبية</td>
+                      <td>خميس مشيط</td>
+                      <td>خميس مشيط</td>
+                      <td>1,200.00</td>
+                      <td>180.00</td>
+                      <td>1380.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding: 0">
+          <table style="margin-top: 5px">
+            <tr class="va-top">
+              <td style="width: 380px; padding-right: 9px">
+                <table class="car-information-table">
+                  <thead>
+                    <tr class="th-style">
+                      <th
+                        colspan="3"
+                        class="border-left border-top border-bottom border-right my-bg"
+                      >
+                        <table class="car-information-table">
+                          <tr class="th-style">
+                            <th class="text-left">Amount to be collected :</th>
+                            <th class="text-right">50 SAR</th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </td>
+              <td style="width: 380px; padding-left: 5px">
+                <table class="car-information-table">
+                  <thead>
+                    <tr class="th-style">
+                      <th
+                        colspan="3"
+                        class="border-left border-top border-bottom border-right my-bg"
+                      >
+                        <table class="car-information-table">
+                          <tr class="th-style">
+                            <th class="text-left rtl ">500 ر.س</th>
+                            <th class="rtl text-right">
+                              المبلغ المطلوب تحصيله :
+                            </th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3" style="padding: 0">
+          <table style="margin-top: 5px; width: 100%" class="va-top">
+            <tr>
+              <td style="width: 380px; padding-right: 1%; vertical-align: top;">
+                <table
+                  class="note-table border-bottom border-right border-left border-top car-information-table"
+                >
+                  <tr>
+                    <td style="font-size: 16px; color: #707070">Notes :</td>
+                    <td class="rtl" style="font-size: 16px; color: #707070">
+                      الملاحظات :
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="padding-top: 0" class="rtl">
+                      تمت الخدمة بنجاح وقام فريق ونش بإمكان المهمة واستطعنا ان
+                      نجعل عميلنا سعيداً ومرتاحاً. شكراً لاستخدامكم ونش
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="width: 380px; padding-left: 1%">
+                <table
+                  class="car-information-table border-top border-bottom border-left border-right light-table"
+                >
+                  <tr>
+                    <td style="width: 40%" class="table-title">
+                      Total Cost:
+                    </td>
+                    <td style="width: 20%" class="text-center">1000</td>
+                    <td style="width: 40%" class="rtl table-title">
+                     اجمالي التكلفة:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-title">
+                      Discount:
+                    </td>
+                    <td class="text-center">1000</td>
+                    <td class="rtl table-title">
+                      الخصم:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-title">Total VAT 15%</td>
+                    <td class="text-center">100</td>
+                    <td class="rtl table-title">اجمالي الضريبة:</td>
+                  </tr>
+                  <tr>
+                    <td class="table-title">Total:</td>
+                    <td class="text-center">100</td>
+                    <td class="rtl table-title">المجموع:</td>
+                  </tr>
+                  <tr>
+                    <td class="table-title">The rest:</td>
+                    <td class="text-center">100</td>
+                    <td class="rtl table-title">الباقي:</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
