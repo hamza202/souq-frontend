@@ -2543,9 +2543,9 @@ a[data-readmore-toggle] {
 }
 .header-comp-logo{
   h4{
-    max-width: calc(100% - 70px);
+    max-width: 197px;
     @include media-breakpoint-down(xxl){
-      max-width: calc(100% - 55px);
+      max-width: 296px;
     }
   }
 }
